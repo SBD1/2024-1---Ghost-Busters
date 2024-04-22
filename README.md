@@ -1,6 +1,6 @@
 # 2024.1 - Ghost Busters
 
-<div align="center"> <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.hatchwise.com%2Fresources%2Fthe-history-of-the-ghostbusters-logo&psig=AOvVaw0FzMh8EriRjKhRwxWd8Se_&ust=1713882125291000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNjy4bDa1YUDFQAAAAAdAAAAABAE" height="230" width="auto"/> </div>
+<div align="center"> <img src="https://www.hatchwise.com/wp-content/uploads/2023/03/Ghostbusters-Logo-700x394-1.png.webp" height="230" width="auto"/> </div>
 
 <div align="center">Repositório para desenvolvimento de um MUD inspirado em Ghost Busters da disciplina de SBD1 - 2024.1</div>
 
