@@ -3,7 +3,6 @@
 ## ENTIDADES
 - Mundo
 - Lugar
-- Dificuldade
 - Coisa ruim
 - Diálogo
 - Personagem
@@ -14,32 +13,30 @@
 
 ## ATRIBUTOS
 - Mundo:
-  - `<u>id_mundo</u>`
+  - <ins>id_mundo</ins>
+  - dificuldade
 - Lugar:
-  - `nome`
-  - `descrição`
-- Dificuldade:
-  - `nível`
+  - <ins>nome</ins>
+  - descrição
 - Coisa ruim:
-  - `descrição`
-  - `consequência`
+  - descrição
+  - consequência
 - Diálogo:
-  - `descrição`
+  - descrição
 - Personagem:
-  - `nome`
-  - `vida`
-  - `características`
-- PC:
-  - (atributos a serem definidos)
+  - <ins>nome</ins>
+  - vida
+  - características
+- PC
 - NPC:
-  - `habilidade`
+  - habilidade
 - Equipamento:
-  - `nome`
-  - `dano`
-  - `ataque`
-  - `descrição`
+  - <ins>nome</ins>
+  - dano
+  - ataque
+  - descrição
 - Fase:
-  - `numeração`
+  - <ins>numeração</ins>
 
 ## RELACIONAMENTOS
 ### Mundo possui dificuldade:
