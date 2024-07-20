@@ -39,9 +39,6 @@
   - <ins>numeração</ins>
 
 ## RELACIONAMENTOS
-### Mundo possui dificuldade:
-- Mundo possui uma e apenas uma dificuldade
-- Dificuldade é de um e apenas um mundo
 
 ### Lugar está no mundo:
 - Lugar está em um e apenas um mundo
