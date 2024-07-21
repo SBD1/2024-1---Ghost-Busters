@@ -88,6 +88,6 @@ Identificação do PC | id_pc | int | A Identificação do Pc vai ser usada para
 
 | Versão |    Data    | Descrição               | Autor                                                                                                                 |
 | :----: | :--------: | ----------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `1.0  | 16/09/2024 | Criação do documento DD | [Davi Pierre](https://github.com/DaviPierre)                                                                          |
+| 1.0  | 16/09/2024 | Criação do documento DD | [Davi Pierre](https://github.com/DaviPierre)                                                                          |
 | 1.1 | 19/07/2024 | Criação da Entidade Mundo e Lugar | [Davi Pierre](https://github.com/DaviPierre) | 
 | 1.2 | 20/07/2024 | Criação das entidades Coisa Ruim, Dialogo, Pc Npc, Fase | [Davi Pierre](https://github.com/DaviPierre) |
