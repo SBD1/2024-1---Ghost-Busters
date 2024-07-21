@@ -32,25 +32,21 @@ A batalha culmina no Banco da Cidade, onde o temível Vigo, um feiticeiro mediev
 
 ---
 
-## Como jogar?
-
----
-
 ## Apresentações
 
 | Módulo | Link da gravação                                                                                    | Data       |
 | ------ | --------------------------------------------------------------------------------------------------- | ---------- |
-| 1      | [Apresentação Módulo 1]()                                  | --- |
-| 2      | [Apresentação Módulo 2](./docs/apresentacoes/apresentacao_m02.mp4)                                  | --- |
-| 3      | [Apresentação Módulo 3](./docs/apresentacoes/apresentacao_m03%20-%20Edilberto%20e%20Zenilda.mp4)    | --- |
-| Final  | [Apresentação Final](./docs/apresentacoes/apresentacao_final_zenilda_matheus.mp4) | --- |
+| 1      | [Apresentação Módulo 1](https://github.com/SBD1/2024-1---Ghost-Busters/tree/main/docs/Modulo1)| 22/07/24 |
+| 2      | [Apresentação Módulo 2]()| 19/08/24 |
+| 3      | [Apresentação Módulo 3]()| 09/09/24 |
 
 ## Entregas
 
 - Módulo 1
 
-  - [Dicionário de Dados]()
-  - [Modelo Entidade-Relacionamento]()
+  - [Dicionário de Dados](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo1/DD.md)
+  - [Diagrama Entidade-Relacionamento](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo1/DER.jpeg)
+  - [Modelo Entidade-Relacionamento](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo1/MER.md)
   - [Modelo Relacional]()
 
 
@@ -61,4 +57,6 @@ A batalha culmina no Banco da Cidade, onde o temível Vigo, um feiticeiro mediev
 
 | Versão |    Data    | Descrição                                      | Autor                                               | Revisão                                                      |
 | :----: | :--------: | ---------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------ |
-| `1.0`  | 08/04/2024 | Estruturação do README do projeto              | [Davi Pierre](https://github.com/DaviPierre) |                                                              |
+| `1.0`  | 08/04/2024 | Estruturação do README do projeto| [Davi Pierre](https://github.com/DaviPierre) |[Julia Gabriela](https://github.com/JuliaGabP)|
+| `1.1`  | 21/07/2024 | Atualização do README do projeto| [Julia Gabriela](https://github.com/JuliaGabP) ||
+
