@@ -19,6 +19,8 @@
   - <ins>nome</ins>
   - descrição
 - Coisa ruim:
+  - <ins>nome_fantasma</ins>
+  - <ins>numeração da fase (chave secundária)</ins>
   - descrição
   - consequência
 - Diálogo:
