@@ -52,10 +52,6 @@
 
 #### Descrição: O PC é o personagem que o jogador vai poder controlar durante o jogo, o personagem principal.
 
-| Variável  |  Nome da variável  |  Tipo da variável  |  Descrição  |  Valores permitidos  |  Possui valores nulos  |  É chave |
-| --- | --- | --- | --- | --- | --- | ---|
-Identificação do PC | id_pc | int | A Identificação do Pc vai ser usada para se referir ao personagem do jogador durante o jogo | 0001-9999 | Não | Sim |
-
 ## Entidade Non-Playable Character (NPC)
 
 #### Descrição: O NPC são os personagens que o PC vai ter que enfrentar para poder terminar a aventura
