@@ -13,32 +13,32 @@
 
 ## ATRIBUTOS
 - Mundo:
-  - <ins>id_mundo</ins>
-  - dificuldade
+  - <ins>Id_mundo</ins>
+  - Dificuldade
 - Lugar:
-  - <ins>nome</ins>
-  - descrição
+  - <ins>Id_lugar</ins>
+  - Descrição
 - Coisa ruim:
-  - <ins>nome_fantasma</ins>
-  - <ins>numeração da fase (chave secundária)</ins>
-  - descrição
-  - consequência
+  - <ins>Id_cr</ins>
+  - Descrição
+  - Consequência
 - Diálogo:
-  - descrição
+  - <ins>Id_dial</ins>
+  - Descrição
 - Personagem:
-  - <ins>nome</ins>
-  - vida
-  - características
+  - <ins>Nome</ins>
+  - Vida
+  - Características
 - PC
 - NPC:
-  - habilidade
+  - Habilidade
 - Equipamento:
-  - <ins>nome</ins>
-  - dano
-  - ataque
-  - descrição
+  - <ins>Nome_equi</ins>
+  - Dano
+  - Ataque
+  - Descrição
 - Fase:
-  - <ins>numeração</ins>
+  - <ins>Numeração</ins>
 
 ## RELACIONAMENTOS
 
@@ -68,7 +68,7 @@
 
 ### Personagem fala diálogo:
 - Personagem fala nenhum ou vários diálogos
-- Diálogo pode ser falado por um ou vários personagens
+- Diálogo pode ser falado por um único personagem
 
 ### Lugar possui fase:
 - Lugar possui uma ou várias fases
