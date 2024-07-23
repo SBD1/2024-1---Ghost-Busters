@@ -78,3 +78,10 @@
 - Fase possui uma coisa ruim
 - Coisa ruim pode ser de uma ou várias fases
 
+| Versão |    Data    | Descrição               | Autor                                                                                                                 |
+| :----: | :--------: | ----------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| 1.0  | 18/07/2024 | Criação do documento MER | [Julia Gabriela](https://github.com/JuliaGabP)                                                                          |
+| 1.1  | 19/07/2024 | Atualização do documento MER| [Julia Gabriela](https://github.com/JuliaGabP) | 
+| 1.2  | 19/07/2024 | Atualização do documento MER| [Julia Gabriela](https://github.com/JuliaGabP) | 
+| 1.3  | 22/07/2024 | Atualização do documento MER| [Matheus Barros](https://github.com/Ninja-Haiyai) | 
+| 1.4  | 22/07/2024 | Atualização do documento MER| [Julia Gabriela](https://github.com/JuliaGabP) | 
