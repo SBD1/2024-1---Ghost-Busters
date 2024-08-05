@@ -37,7 +37,7 @@ A batalha culmina no Banco da Cidade, onde o temível Vigo, um feiticeiro mediev
 | Módulo | Link da gravação                                                                                    | Data       |
 | ------ | --------------------------------------------------------------------------------------------------- | ---------- |
 | 1      | [Apresentação Módulo 1](https://github.com/SBD1/2024-1---Ghost-Busters/tree/main/docs/Modulo1)| 22/07/24 |
-| 2      | [Apresentação Módulo 2]()| 19/08/24 |
+| 2      | [Apresentação Módulo 2](https://github.com/SBD1/2024-1---Ghost-Busters/tree/main/docs/Modulo2)| 19/08/24 |
 | 3      | [Apresentação Módulo 3]()| 09/09/24 |
 
 ## Entregas
@@ -45,10 +45,17 @@ A batalha culmina no Banco da Cidade, onde o temível Vigo, um feiticeiro mediev
 - Módulo 1
 
   - [Dicionário de Dados](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo1/DD.md)
-  - [Diagrama Entidade-Relacionamento](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo1/DER.jpeg)
+  - [Diagrama Entidade-Relacionamento](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo1/DER.md)
   - [Modelo Entidade-Relacionamento](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo1/MER.md)
-  - [Modelo Relacional]()
+  - [Modelo Relacional](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo1/MREL.md)
 
+- Módulo 2
+
+  - [Normalização](https://github.com/SBD1/2024-1---Ghost-Busters/tree/main/docs/Modulo2/Normalizacao)
+  - [Álgebra Relacional](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo2/ALGEBRA_RELACIONAL.md)
+  - [Data Definition Language](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo2/DDL.sql)
+  - [Data Manipulation Language](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo2/DML.sql)
+  - [Data Query Language](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo2/DQL.sql).
 
 - Módulo Final
   - Jogo MUD
@@ -58,5 +65,6 @@ A batalha culmina no Banco da Cidade, onde o temível Vigo, um feiticeiro mediev
 | Versão |    Data    | Descrição                                      | Autor                                               | Revisão                                                      |
 | :----: | :--------: | ---------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------ |
 | `1.0`  | 08/04/2024 | Estruturação do README do projeto| [Davi Pierre](https://github.com/DaviPierre) |[Julia Gabriela](https://github.com/JuliaGabP)|
-| `1.1`  | 21/07/2024 | Atualização do README do projeto| [Julia Gabriela](https://github.com/JuliaGabP) ||
+| `1.1`  | 21/07/2024 | Atualização do README do projeto| [Julia Gabriela](https://github.com/JuliaGabP) |[Julia Gabriela](https://github.com/JuliaGabP)|
+| `1.2`  | 05/08/2024 | Correção de erros e adição do Módulo 2 no README do projeto| [Julia Gabriela](https://github.com/JuliaGabP) ||
 
