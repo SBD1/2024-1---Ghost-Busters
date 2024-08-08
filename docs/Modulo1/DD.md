@@ -68,10 +68,10 @@
 
 | Variável                | Nome da variável | Tipo da variável | Descrição | Valores permitidos | Possui valores nulos |É chave |                                     
 |---------------------------------|------------------|------------------|--------------------------------------------------------------------------------------|
-| Nome_equi                       | nome             | char[30]         | Um nome que possamos nos referir ao equipamento | a-z, A-Z           | Não  | Sim |     
-| Ataque           | Ataque | char[150]        | Uma breve descrição de como usar o equipamento adquirido                             | Não            | Não |
-| Dano  | dano             | int              | Uma fachetária dos possíveis valores da quantidade de dano causada ao HP da Entidade | Não             | Não |
-| Descrição | descricao        | char[500]        | Uma descrição da aparência do equipamento                                            |
+| Nome_equi                       | nome             | char[30]         | Um nome que possamos nos referir ao equipamento               | a-z, A-Z           | Não  | Sim |     
+| Ataque                          | ataque           | char[150]        | Uma breve descrição de como usar o equipamento adquirido      | a-z, A-Z |                       | Não            | Não |
+| Dano  | dano             | int              | Uma fachetária dos possíveis valores da quantidade de dano causada ao HP da Entidade    | a-z, A-Z |  Não             | Não |
+| Descrição | descricao        | char[500]        | Uma descrição da aparência do equipamento                                           | a-z, A-Z |  Não             | Não |
 
 ## Entidade Fase
 
@@ -90,3 +90,4 @@
 | 1.2 | 22/07/2024 | Revisão e atualização do Dicionário de Dados | [Julia Gabriela](https://github.com/JuliaGabP) |
 | 1.3 | 22/07/2024 | Revisão e atualização do Dicionário de Dados | [Julia Gabriela](https://github.com/JuliaGabP) |
 | 1.4 | 22/07/2024 | Revisão e atualização do Dicionário de Dados | [Julia Gabriela](https://github.com/JuliaGabP) |
+| 1.5 | 08/08/2024 | Atualização da tabela Equipamento             |[Davi Pierre](https://github.com/DaviPierre) |
