@@ -8,9 +8,9 @@
 
 | Variável  |  Nome da variável  |  Tipo da variável  |  Descrição  |  Valores permitidos  |  Possui valores nulos  |  É chave |
 | --- | --- | --- | --- | --- | --- | ---|
-| Id_cr | id_cr | int | A identificação da coisa ruim é o seu código numérico| 00-99 | Não | Sim |
-| Descrição | descricao | char[500] | A descrição é um pequeno diálogo descrevendo o que acontece com o PC | a-z, A-Z | Não | Não |
-| Consequência | consequencia | char[500] | A consequência é o que de fato acontece com o PC | a-z, A-Z | Não | Não |
+| Id_cr | id_cr | SERIAL | A identificação da coisa ruim é o seu código numérico| 00-99 | Não | Sim |
+| Descrição | descricao | TEXT | A descrição é um pequeno diálogo descrevendo o que acontece com o PC | a-z, A-Z | Não | Não |
+| Consequência | consequencia | TEXT | A consequência é o que de fato acontece com o PC | a-z, A-Z | Não | Não |
 
 ## Entidade Diálogo
 
@@ -18,8 +18,8 @@
 
 | Variável  |  Nome da variável  |  Tipo da variável  |  Descrição  |  Valores permitidos  |  Possui valores nulos  |  É chave |
 | --- | --- | --- | --- | --- | --- | ---|
-| Id_dial | id_dial | int | A identificação do diálogo é o seu código numérico| 000-999 | Não | Sim |
-| Descrição | descricao | char[500] | A descrição do Dialogo é uma string que será apresentado ao Jogador no momento de interação com um NPC | a-z, A-Z | Não | Não |
+| Id_dial | id_dial | SERIAL | A identificação do diálogo é o seu código numérico| 000-999 | Não | Sim |
+| Descrição | descricao | TEXT | A descrição do Dialogo é uma string que será apresentado ao Jogador no momento de interação com um NPC | a-z, A-Z | Não | Não |
 
 ## Entidade Lugar 
 
@@ -27,8 +27,8 @@
 
 | Variável  |  Nome da variável  |  Tipo da variável  |  Descrição  |  Valores permitidos  |  Possui valores nulos  |  É chave |
 | --- | --- | --- | --- | --- | --- | ---|
-| Id_lugar | id_lugar | char[150] | A identificação da coisa ruim é o seu nome|a-z, A-Z | Não | Sim |
-| Descrição | descricao | char[150] | A Descrição apresenta toda a ambientação do lugar, ou seja, tudo que o PC pode ver | a-z, A-Z | Não | Não |
+| Id_lugar | id_lugar | VARCHAR[50] | A identificação da coisa ruim é o seu nome|a-z, A-Z | Não | Sim |
+| Descrição | descricao | TEXT | A Descrição apresenta toda a ambientação do lugar, ou seja, tudo que o PC pode ver | a-z, A-Z | Não | Não |
 
 
 ## Entidade Mundo
@@ -37,8 +37,8 @@
 
 | Variável  |  Nome da variável  |  Tipo da variável  |  Descrição  |  Valores permitidos  |  Possui valores nulos  |  É chave |
 | --- | --- | --- | --- | --- | --- | ---|
-| Id_mundo | id_mundo | int | Identificação do mundo que está sendo criado | 001-999 | Não | Sim |
-| Dificuldade | dificuldade | int | Identifica qual a dificulade do mundo definindo a vida e o dano dos NPCs | 001-003 | Não | Não |
+| Id_mundo | id_mundo | SERIAL | Identificação do mundo que está sendo criado | 001-999 | Não | Sim |
+| Dificuldade | dificuldade | INT | Identifica qual a dificulade do mundo definindo a vida e o dano dos NPCs | 001-003 | Não | Não |
 
 ## Entidade: Personagem
 
@@ -46,9 +46,9 @@
 
 | Variável                            | Nome da variável   | Tipo da variável | Descrição                                                     | Valores permitidos | Possui valores nulos |É chave |
 |-------------------------------------|--------------------|------------------|---------------------------------------------------------------|--------------------|----------------------|-----|
-| Nome                  | nome               | char[30]         | Um nome que possamos nos referir ao personagem                | a-z, A-Z           | Não                  | Sim |
-| Vida                  | vida               | int              | A quantidade de pontos de dano que um personagem pode sofrer  | 001, 999           | Não                  | Não |
-| Característica        | caracteristicas    | char[500]        | Uma descrição breve da aparência do personagem                | a-z, A-Z           | Não                  | Não |
+| Nome                  | nome               | VARCHAR[30]         | Um nome que possamos nos referir ao personagem                | a-z, A-Z           | Não                  | Sim |
+| Vida                  | vida               | INT              | A quantidade de pontos de dano que um personagem pode sofrer  | 001, 999           | Não                  | Não |
+| Característica        | caracteristicas    | TEXT       | Uma descrição breve da aparência do personagem                | a-z, A-Z           | Não                  | Não |
 
 ## Entidade Playable Character (PC)
 
@@ -60,7 +60,7 @@
 
 | Variável  |  Nome da variável  |  Tipo da variável  |  Descrição  |  Valores permitidos  |  Possui valores nulos  |  É chave |
 | --- | --- | --- | --- | --- | --- | ---|
-| Habilidade | habilidade | char[150] | Descreve um poder especial que os NPCs podem ter | a-z, A-Z | Não | Sim |
+| Habilidade | habilidade | TEXT | Descreve um poder especial que os NPCs podem ter | a-z, A-Z | Não | Sim |
 
 ## Entidade: Equipamento
 
@@ -68,10 +68,10 @@
 
 | Variável  |  Nome da variável  |  Tipo da variável  |  Descrição  |  Valores permitidos  |  Possui valores nulos  |  É chave |
 | --- | --- | --- | --- | --- | --- | ---|
-| Nome_equi                       | nome             | char[30]         | Um nome que possamos nos referir ao equipamento               | a-z, A-Z           | Não  | Sim |     
-| Ataque                          | ataque           | char[150]        | Uma breve descrição de como usar o equipamento adquirido      | a-z, A-Z                 | Não            | Não |
-| Dano  | dano             | int              | Uma fachetária dos possíveis valores da quantidade de dano causada ao HP da Entidade    | a-z, A-Z |  Não             | Não |
-| Descrição | descricao        | char[500]        | Uma descrição da aparência do equipamento                                           | a-z, A-Z |  Não             | Não |
+| Nome_equi                       | nome             | VARCHAR[30]         | Um nome que possamos nos referir ao equipamento               | a-z, A-Z           | Não  | Sim |     
+| Ataque                          | ataque           | TEXT        | Uma breve descrição de como usar o equipamento adquirido      | a-z, A-Z                 | Não            | Não |
+| Dano  | dano             | INT              | Uma fachetária dos possíveis valores da quantidade de dano causada ao HP da Entidade    | a-z, A-Z |  Não             | Não |
+| Descrição | descricao        | TEXT        | Uma descrição da aparência do equipamento                                           | a-z, A-Z |  Não             | Não |
 
 ## Entidade Fase
 
@@ -79,14 +79,14 @@
 
 | Variável  |  Nome da variável  |  Tipo da variável  |  Descrição  |  Valores permitidos  |  Possui valores nulos  |  É chave |
 | --- | --- | --- | --- | --- | --- | ---|
-| Numeração | numeracao | int | A númeração define em qual fase o PC se encontra, adaptando os lugares que o PC pode acessar de acordo | 01-09 | Não | Sim |
+| Numeração | numeracao | SERIAL | A númeração define em qual fase o PC se encontra, adaptando os lugares que o PC pode acessar de acordo | 01-09 | Não | Sim |
 
 ## Histórico de versões
 
 | Versão |    Data    | Descrição               | Autor                                                                                                                 |
 | :----: | :--------: | ----------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| 1.0  | 20/07/2024 | Criação do documento DD | [Davi Pierre](https://github.com/DaviPierre)                                                                          |
-| 1.1 | 20/07/2024 | Criação de entidades e atualização | [Davi Pierre](https://github.com/DaviPierre) | 
-| 1.2 | 22/07/2024 | Revisão e atualização do Dicionário de Dados | [Julia Gabriela](https://github.com/JuliaGabP) |
-| 1.3 | 08/08/2024 | Atualização da tabela Equipamento             |[Davi Pierre](https://github.com/DaviPierre) |
-
+| 1.0 | 20/07/2024 | Criação do documento DD                      | [Davi Pierre](https://github.com/DaviPierre)                                                        |
+| 1.1 | 20/07/2024 | Criação de entidades e atualização           | [Davi Pierre](https://github.com/DaviPierre)                                                        | 
+| 1.2 | 22/07/2024 | Revisão e atualização do Dicionário de Dados | [Julia Gabriela](https://github.com/JuliaGabP)                                                      |
+| 1.3 | 08/08/2024 | Atualização da tabela Equipamento            | [Davi Pierre](https://github.com/DaviPierre)                                                        |
+| 1.4 | 08/07/2024 | Correção dos tipos das variáveis             | [Julia Gabriela](https://github.com/JuliaGabP)                                                      |
