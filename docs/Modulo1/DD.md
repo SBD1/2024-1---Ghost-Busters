@@ -88,7 +88,5 @@
 | 1.0  | 20/07/2024 | Criação do documento DD | [Davi Pierre](https://github.com/DaviPierre)                                                                          |
 | 1.1 | 20/07/2024 | Criação de entidades e atualização | [Davi Pierre](https://github.com/DaviPierre) | 
 | 1.2 | 22/07/2024 | Revisão e atualização do Dicionário de Dados | [Julia Gabriela](https://github.com/JuliaGabP) |
-| 1.3 | 22/07/2024 | Revisão e atualização do Dicionário de Dados | [Julia Gabriela](https://github.com/JuliaGabP) |
-| 1.4 | 22/07/2024 | Revisão e atualização do Dicionário de Dados | [Julia Gabriela](https://github.com/JuliaGabP) |
-| 1.5 | 08/08/2024 | Atualização da tabela Equipamento             |[Davi Pierre](https://github.com/DaviPierre) |
+| 1.3 | 08/08/2024 | Atualização da tabela Equipamento             |[Davi Pierre](https://github.com/DaviPierre) |
 
