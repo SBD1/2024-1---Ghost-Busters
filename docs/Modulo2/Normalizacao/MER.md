@@ -8,83 +8,83 @@
 - Relacionamentos complexos podem ser simplificados.
 
 ## ENTIDADES
-- Mundo
-- Lugar
-- Coisa ruim
-- Diálogo
-- Personagem
-- PC
-- NPC
-- Equipamento
-- Fase
+- mundo
+- fase
+- personagem
+- arma
+- sala
+- fantasma
 
 ## ATRIBUTOS
-- Mundo:
-  - <ins>Id</ins>
-  - Dificuldade
-- Lugar:
-  - <ins>Id</ins>
-  - Descrição
-- Coisa ruim:
-  - <ins>Id</ins>
-  - Descrição
-  - Consequência
-- Diálogo:
-  - <ins>Id</ins>
-  - Descrição
-- Personagem:
-  - <ins>Nome</ins>
-  - Vida
-  - Características
-- PC (tipo de personagem)
-- NPC (tipo de personagem):
-    - Habilidade
-- Equipamento:
-  - <ins>Nome</ins>
-  - Dano
-  - Ataque
-  - Descrição
-- Fase:
-  - <ins>Numeração</ins>
+- mundo:
+  - <ins>id</ins>
+  - dificuldade
+  - nome
+  - status
+  - vida_atual
+  - fase_atual
+  - moedas_coletadas
+  - fantasmas_derrotados
+- fase:
+  - <ins>id</ins>
+  - nome
+  - ordem
+  - descricao
+  - coisa_ruim
+- personagem:
+  - <ins>id</ins>
+  - nome
+  - forca
+  - agilidade
+  - inteligencia
+  - vida_inicial
+  - descricao_fisica
+- arma:
+  - <ins>id</ins>
+  - tipo
+  - nome
+  - dano_medio
+  - descricao_fisica
+  - descricao_ataque
+- sala:
+  - <ins>id</ins>
+  - nome
+  - ordem
+  - descricao
+- fantasma:
+  - <ins>id</ins>
+  - vida
+  - nome
+  - barulho
+  - descricao
+  - dropa_moeda
+  - ataque_especial
+- personagemarma:
+  - <ins>id</ins>
 
 ## RELACIONAMENTOS
 
-### Lugar está no mundo:
-- Lugar está em um e apenas um mundo
-- Mundo possui no mínimo um e no máximo vários lugares
+### personagem e mundo:
+- personagem pode estar associado a vários mundos
+- mundo possui apenas um personagem
 
-### PC está no lugar:
-- PC pode estar em um e apenas um lugar
-- Lugar pode ser ocupado por no mínimo e no máximo um PC
+### mundo e fase:
+- mundo pode ter várias fases
+- fase depende de um mundo
 
-### PC possui equipamento:
-- PC possui no mínimo um equipamento e no máximo vários
-- Equipamento pode ser de um e apenas um PC
+### sala e fantasma:
+- sala pode ter no máximo um fantasma
+- fantasma está no máximo em uma sala
 
-### PC passa fase:
-- PC passa nenhuma ou várias fases
-- Fase pode ser passada por um e apenas um PC
+### personagem e arma:
+- personagem possui muitas armas
+- armas podem ser de vários personagens
 
-### PC mata NPC:
-- PC mata nenhum ou vários NPC
-- NPC mata nenhum ou um PC
+### fase e sala:
+- fase pode possuir várias salas
+- sala pertence a uma fase
 
-### NPC está na fase:
-- NPC pertence a uma única fase
-- Fase possui apenas um único NPC
-
-### Personagem fala diálogo:
-- Personagem fala nenhum ou vários diálogos
-- Diálogo pode ser falado por um único personagem
-
-### Lugar possui fase:
-- Lugar possui uma ou várias fases
-- Fase é de um e apenas um lugar
-
-### Fase possui coisa ruim:
-- Fase possui uma coisa ruim
-- Coisa ruim pode ser de uma ou várias fases
-
-| Versão |    Data    | Descrição                     | Autor                                                                                                                 |
-| :----: | :--------: | ----------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| 1.0    | 09/08/2024 | Preenchimento do documento MER| [Julia Gabriela](https://github.com/JuliaGabP)                                                                        |
+| Versão |    Data    | Descrição                                       | Autor                                                                                                         |
+| :----: | :--------: | ------------------------------------------------| ------------------------------------------------------------------------------------------------------------- |
+| 1.0    | 09/08/2024 | Preenchimento do documento MER                  | [Julia Gabriela](https://github.com/JuliaGabP)                                                                |
+| 1.1    | 13/08/2024 | Correção das entidades, atributos e relações MER| [Julia Gabriela](https://github.com/JuliaGabP)                                                                |
