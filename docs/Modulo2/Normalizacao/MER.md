@@ -51,10 +51,13 @@
   - nome
   - ordem
   - descricao
+  - vida_restaurada
 - fantasma:
   - <ins>id</ins>
+  - dica
   - vida
   - nome
+  - ordem
   - barulho
   - descricao
   - dropa_moeda
