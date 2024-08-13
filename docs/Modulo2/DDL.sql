@@ -1,76 +1,71 @@
 BEGIN;
 
--- Tabela de Mundo
-CREATE TABLE mundo (
-    id SERIAL PRIMARY KEY,
-    dificuldade INT NOT NULL
+CREATE TABLE Personagem (
+    ID SERIAL PRIMARY KEY,
+    Nome VARCHAR(50) NOT NULL,
+    DescricaoFisica TEXT,
+    Forca INT CHECK (Forca >= 0),
+    Agilidade INT CHECK (Agilidade >= 0),
+    Inteligencia INT CHECK (Inteligencia >= 0),
+    VidaInicial INT CHECK (VidaInicial > 0)
 );
 
--- Tabela de Lugar
-CREATE TABLE lugar (
-    id VARCHAR(50) PRIMARY KEY,
-    descricao TEXT NOT NULL,
-    id_mundo INT NOT NULL
-    CONSTRAINT fk_mundo FOREIGN KEY (id_mundo) REFERENCES mundo(id) ON DELETE CASCADE
+CREATE TABLE Mundo (
+    ID SERIAL PRIMARY KEY,
+    Nome VARCHAR(50) NOT NULL,
+    Dificuldade INT CHECK (Dificuldade IN (1, 2, 3)),
+    Status VARCHAR(20),
+    ID_Personagem INT REFERENCES Personagem(ID),
+    VidaAtual INT CHECK (VidaAtual > 0),
+    FaseAtual INT,
+    MoedasColetadas INT DEFAULT 0,
+    FantasmasDerrotados INT DEFAULT 0
 );
 
--- Tabela de Personagem
-CREATE TABLE personagem (
-    nome VARCHAR(30) PRIMARY KEY,
-    vida INT NOT NULL,
-    caracteristicas TEXT NOT NULL
+CREATE TABLE Fase (
+    ID SERIAL PRIMARY KEY,
+    Nome VARCHAR(50) NOT NULL,
+    Descricao TEXT,
+    Ordem INT,
+    ID_Mundo INT REFERENCES Mundo(ID),
+    CoisaRuim TEXT
 );
 
--- Tabela de PC (subtipo de Personagem)
-CREATE TABLE pc (
-    nome VARCHAR(30) PRIMARY KEY,
-    id_lugar INT NOT NULL,
-    CONSTRAINT fk_personagem_pc FOREIGN KEY (nome) REFERENCES personagem(nome) ON DELETE CASCADE,
-    CONSTRAINT fk_lugar_pc FOREIGN KEY (id_lugar) REFERENCES lugar(id) ON DELETE CASCADE
+CREATE TABLE Sala (
+    ID SERIAL PRIMARY KEY,
+    Nome VARCHAR(50) NOT NULL,
+    Descricao TEXT,
+    ID_Fase INT REFERENCES Fase(ID),
+    Ordem INT,
+    VidaRestaurada INT CHECK (VidaRestaurada BETWEEN 4 AND 8)
 );
 
--- Tabela de NPC (subtipo de Personagem)
-CREATE TABLE npc (
-    nome VARCHAR(30) PRIMARY KEY,
-    habilidade TEXT NOT NULL,
-    numeracao_fase INT NOT NULL,
-    CONSTRAINT fk_personagem_npc FOREIGN KEY (nome) REFERENCES personagem(nome) ON DELETE CASCADE,
-    CONSTRAINT fk_fase_npc FOREIGN KEY (numeracao_fase) REFERENCES fase(numeracao) ON DELETE CASCADE
+CREATE TABLE Arma (
+    ID SERIAL PRIMARY KEY,
+    Nome VARCHAR(50) NOT NULL,
+    DescricaoFisica TEXT,
+    DanoMedio INT CHECK (DanoMedio > 0),
+    DescricaoAtaque TEXT,
+    Tipo VARCHAR(20) CHECK (Tipo IN ('Forca', 'Agilidade', 'Inteligencia'))
 );
 
-
--- Tabela de Fase
-CREATE TABLE fase (
-    numeracao INT PRIMARY KEY,
-    id_lugar INT NOT NULL,
-    CONSTRAINT fk_lugar_fase FOREIGN KEY (id_lugar) REFERENCES lugar(id) ON DELETE CASCADE
+CREATE TABLE PersonagemArma (
+    ID SERIAL PRIMARY KEY,
+    ID_Personagem INT REFERENCES Personagem(ID),
+    ID_Arma INT REFERENCES Arma(ID)
 );
 
--- Tabela de Diálogo
-CREATE TABLE dialogo (
-    id SERIAL PRIMARY KEY,
-    descricao TEXT NOT NULL,
-    nome_personagem VARCHAR(30) NOT NULL,
-    CONSTRAINT fk_personagem FOREIGN KEY (nome_personagem) REFERENCES personagem(nome) ON DELETE CASCADE
-);
-
--- Tabela de Equipamento
-CREATE TABLE equipamento (
-    nome VARCHAR(30) PRIMARY KEY,
-    descricao TEXT NOT NULL,
-    ataque TEXT NOT NULL,
-    dano INT NOT NULL,
-    nome_pc VARCHAR(30) NOT NULL,
-    CONSTRAINT fk_pc_equipamento FOREIGN KEY (nome_pc) REFERENCES pc(nome) ON DELETE CASCADE
-);
-
--- Tabela de Coisa Ruim
-CREATE TABLE coisa_ruim (
-    id SERIAL PRIMARY KEY,
-    descricao TEXT NOT NULL,
-    consequencia TEXT NOT NULL,
-    numeracao_fase INT NOT NULL,
-    CONSTRAINT fk_fase FOREIGN KEY (numeracao_fase) REFERENCES fase(numeracao) ON DELETE CASCADE
+CREATE TABLE Fantasma (
+    ID SERIAL PRIMARY KEY,
+    Nome VARCHAR(50) NOT NULL,
+    Descricao TEXT,
+    Vida INT CHECK (Vida > 0),
+    AtaqueEspecial TEXT,
+    Barulhos TEXT,
+    DropaMoeda BOOLEAN,
+    Ordem INT,
+    Dica TEXT,
+    ID_Sala INT REFERENCES Sala(ID)
 );
 
 COMMIT;
