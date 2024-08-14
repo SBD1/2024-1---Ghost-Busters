@@ -41,9 +41,39 @@ Definição: O mundo é onde todas as informações são salvas
 | Fantasmas Derrotados        | fantasmas_derrotados | INT              | Esse atributo mantem a conta de quantos fantasmas foram derrotados durante a jornada do personagem do jogador                                   | 0 - 5                     | Não                  | Não     |
 
 
+## Entidade Sala 
+
+Definição: Ambiente onde os personagens podem intereagir com o mundo e com eles mesmos 
+
+| Variável              | Nome da variável | Tipo da variável | Descrição                                                                                                                                       | Valores permitidos   | Possui valores nulos | É chave |
+| --------------------- | ---------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- | -------------------- | ------- |
+| Identificação         | id               | SERIAL           | Uma variável criada para podermos nos referir a uma sala específica                                                                             | 0 - 999999999        | Não                  | Sim     |
+| Nome                  | nome             | VARCHAR(30)      | O nome da sala é uma definição secundária para o jogador ter uma noção inicial do ambiente ao seu redor                                         | Todos os characteres | Não                  | Não     |
+| Descrição             | descricao        | TEXT             | A descrição é uma apresentação detalhada do ambinete ao redor do jogador, com ligações com outras salas e objetos interativos e não interativos | Todos os characteres | Não                  | Não     |
+| Identificação da Fase | id_fase          | INT              | Uma variável criada para podermos nos referir a uma fase específica                                                                             | 0 - 999999999        | Não                  | Sim     |
+| Ordem                 | ordem            | INT              | Escolhas que o jogador pode tomar dentro de uma sala                                                                                            | Números inteiros     | Não                  | Não     |
+| Vida Restaurada       | vida_restaurada  | INT              | Quantidade de vida que pode ser restaurada pelo jogador em uma sala específica                                                                  | 4 - 8                | Sim                  | Não     |
+
+## Entidade Fase 
+
+Definição: É um conjunto de salas.
+
+| Variável      | Nome da variável | Tipo da variável | Descrição                                                           | Valores permitidos   | Possui valores nulos | É chave |
+| ------------- | ---------------- | ---------------- | ------------------------------------------------------------------- | -------------------- | -------------------- | ------- |
+| Identificação | id               | SERIAL           | Uma variável criada para podermos nos referir a uma fase específica | 0 - 999999999        | Não                  | Sim     |
+| Nome          | nome             | VARCHAR(30)      | É a forma com que a fase será referida para o jogador               | Todos os characteres | Não                  | Não     |
+| Descrição     | descricao        | TEXT             | É uma apresentação detalhada da fase para o jogador                 | Todos os characteres | Não                  | Não     |
+| Ordem         | ordem            | INT              | DESCRIÇÃO                                                           | Números inteiros     | Não                  | Não     |
+
+
+
+
+
+
+
 
 ## Histórico de versões
 
 | Versão | Data       | Descrição                                            | Autor                                        |
 | ------ | ---------- | ---------------------------------------------------- | -------------------------------------------- |
-| 1.0    | 14/08/2024 | Criação da página e das entidades Personagem e Mundo | [Davi Pierre](https://github.com/DaviPierre) |
+| 1.0    | 14/08/2024 | Criação da página e das entidades Personagem, Mundo, Sala e Fase(incompleta) | [Davi Pierre](https://github.com/DaviPierre) |
