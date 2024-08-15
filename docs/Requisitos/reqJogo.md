@@ -23,7 +23,7 @@
       - Coisa Ruim 
       - Descrição do ataque
       - Dano do ataque
-    - NPC pacivo
+    - NPC passivo
       - Diálogo com o personagem
       - Missão secundária
       - Recompensa
@@ -38,10 +38,10 @@
 - Itens
   - Identificação do Item
   - Peso
-  - Armadura
-  - Arma
-  - Capacete
-  - Amuleto
+  - Armadura  (Defesa e descrição)
+  - Arma      (Dano e descrição)
+  - Capacete  (Defesa e descrição)
+  - Amuleto   (Defesa e descrição)
   - Moeda
   - Dinheiro
 - Inventário
@@ -51,13 +51,14 @@
   - Identificação Mundo 
   - Fantasmas derrotados
   - Missão Atual
+  - Missão Secundária atual
   - Sala Atual
   - Dificuldade
   - Status
   - Nome do Mundo
 - Missão
   - Ordem 
-  - Identificação da Fase
+  - Identificação da Missão
   - Nome 
   - Descrição da Missão
 - Grupo de Caçadores
@@ -83,6 +84,6 @@
   - Descrição Física
 
 # Histórico de Versão 
-| Versão | Data       | Descrição                           | Autor                                        |
-| ------ | ---------- | ----------------------------------- | -------------------------------------------- |
-| 1.0    | 15/08/2024 | Criação dos requisitos do Trabalho  | [Davi Pierre](https://github.com/DaviPierre) |
+| Versão | Data       | Descrição                          | Autor                                        |
+| ------ | ---------- | ---------------------------------- | -------------------------------------------- |
+| 1.0    | 15/08/2024 | Criação dos requisitos do Trabalho | [Davi Pierre](https://github.com/DaviPierre) |
