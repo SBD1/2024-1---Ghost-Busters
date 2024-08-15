@@ -7,4 +7,4 @@
 - Novos relacionamentos podem ser criados entre essas entidades.
 - O DER deve ser atualizado para refletir a nova estrutura, eliminando redundâncias e anomalias.
   
-![Imagem do DER](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo2/assets/DER.jpeg)
+![Imagem do DER](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo2/assets/DER.jpg)
