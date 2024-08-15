@@ -58,4 +58,8 @@
     * Todos os atributos devem depender da chave 
   * 3° Forma Normal
     * Atributos comuns não tem dependência parcial de qualquer superchave
-    * 
+
+# Histórico de Versão 
+| Versão | Data       | Descrição                           | Autor                                        |
+| ------ | ---------- | ----------------------------------- | -------------------------------------------- |
+| 1.0    | 15/08/2024 | Criação dos requisitos da entrega 1 | [Davi Pierre](https://github.com/DaviPierre) |
