@@ -5,35 +5,38 @@
   - Descrição física
   - Identificação Personagem
   - Vida
+  - Vida Atual
   - SUBPERSONAGENS
     - Jgogador
       - Atributos
         - Força
         - Agilidade
         - Inteligência
-      - Arma Equipada
-      - Capacete Equipado
-      - Armadura Equipada
-      - Amuleto Equipado
-      - Vida Atual
-      - Inventário 
+      - Equipados
+        - Arma Equipada
+        - Capacete Equipado
+        - Armadura Equipada
+        - Amuleto Equipado
+      - Inventário
+      - Resposta 
     - Fantasma
       - Habilidade especial
       - Drop (Precisa necessáriamente ser um Item)
       - Coisa Ruim 
       - Descrição do ataque
       - Dano do ataque
+      - Barulho
     - NPC passivo
       - Diálogo com o personagem
       - Missão secundária
       - Recompensa
 
     - NPC contratante
-      - Arma Equipada
-      - Capacete Equipado
-      - Armadura Equipada
-      - Amuleto Equipado
-      - Vida Atual
+      - Equipados
+        - Arma Equipada
+        - Capacete Equipado
+        - Armadura Equipada
+        - Amuleto Equipado
       - Preço 
 - Itens
   - Identificação do Item
