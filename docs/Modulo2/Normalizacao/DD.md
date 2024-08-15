@@ -58,15 +58,41 @@ Definição: Ambiente onde os personagens podem intereagir com o mundo e com ele
 
 Definição: É um conjunto de salas.
 
-| Variável      | Nome da variável | Tipo da variável | Descrição                                                           | Valores permitidos   | Possui valores nulos | É chave |
-| ------------- | ---------------- | ---------------- | ------------------------------------------------------------------- | -------------------- | -------------------- | ------- |
-| Identificação | id               | SERIAL           | Uma variável criada para podermos nos referir a uma fase específica | 0 - 999999999        | Não                  | Sim     |
-| Nome          | nome             | VARCHAR(30)      | É a forma com que a fase será referida para o jogador               | Todos os characteres | Não                  | Não     |
-| Descrição     | descricao        | TEXT             | É uma apresentação detalhada da fase para o jogador                 | Todos os characteres | Não                  | Não     |
-| Ordem         | ordem            | INT              | DESCRIÇÃO                                                           | Números inteiros     | Não                  | Não     |
+| Variável               | Nome da variável | Tipo da variável | Descrição                                                                               | Valores permitidos   | Possui valores nulos | É chave |
+| ---------------------- | ---------------- | ---------------- | --------------------------------------------------------------------------------------- | -------------------- | -------------------- | ------- |
+| Identificação          | id               | SERIAL           | Uma variável criada para podermos nos referir a uma fase específica                     | 0 - 999999999        | Não                  | Sim     |
+| Nome                   | nome             | VARCHAR(30)      | É a forma com que a fase será referida para o jogador                                   | Todos os characteres | Não                  | Não     |
+| Descrição              | descricao        | TEXT             | É uma apresentação detalhada da fase para o jogador                                     | Todos os characteres | Não                  | Não     |
+| Ordem                  | ordem            | INT              | DESCRIÇÃO                                                                               | Números inteiros     | Não                  | Não     |
+| Identificação do mundo | id_mundo         | INT              | Uma variável criada para podermos nos referir a um mundo específico                     | 0 - 999999999        | Não                  | Sim     |
+| Coisa Ruim             | coisa_ruim       | TEXT             | Coisa ruim é uma consequência que o jogador irá sofrer ao ser derrotado por um fantasma | Todos os characteres | Não                  | Não     |
 
+## Entidade Arnma 
 
+Definição: São os equipamentos que o jogador vai utilizar para poder derrotar os fantasmas
 
+| Variável            | Nome da variável | Tipo da variável | Descrição                                                                                    | Valores permitidos                   | Possui valores nulos | É chave |
+| ------------------- | ---------------- | ---------------- | -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- | ------- |
+| Identificação       | id               | SERIAL           | Uma variável criada para podermos nos referir a uma arma específica                          | 0 - 999999999                        | Não                  | Sim     |
+| Nome                | nome             | VARCHAR(30)      | É a forma com que a arma será referida para o jogador                                        | Todos os characteres                 | Não                  | Não     |
+| Descrição física    | descricao_fisica | TEXT             | Irá descrever para o jogador a aparência física da arma, ou seja, textura, cor, formato, etc | Todos os characteres                 | Não                  | Não     |
+| Dano médio          | dano_medio       | INT              | Apresentará a quantidade de vida que será removida do monstro ao atacar com a arma           | números inteiros maiores que zero    | Não                  | Não     |
+| Descrição do ataque | desricao_ataque  | TEXT             | Descreve o que acontece ao atacar com uma arma                                               | Todos os characteres                 | Não                  | Não     |
+| Tipo da arma        | tipo             | VARCHAR(20)      | Diz qual o atributo base para se usar a arma                                                 | 'forca', 'agilidade', 'inteligencia' | Não                  | Não     |
+
+## Entidade Fantasma 
+
+| Variável         | Nome da variável | Tipo da variável | Descrição                                                                                                                 | Valores permitidos   | Possui valores nulos | É chave |
+| ---------------- | ---------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------- | -------------------- | -------------------- | ------- |
+| Identificação    | id               | SERIAL           | Uma variável criada para podermos nos referir a um fantasma específico                                                    | 0 - 999999999        | Não                  | Sim     |
+| Nome             | nome             | VARCHAR(30)      | É a forma com que o fantasma será referido para o jogador                                                                 | Todos os characteres | Não                  | Não     |
+| Descrição Fisica | descricao        | TEXT             | Irá descrever para o jogador a aparência física do fantasma, ou seja, textura, cor, formato, etc                          | Todos os characteres | Não                  | Não     |
+| Vida             | vida             | INT              | Define o quão difícil de matar é um fantasma, apresentando quanto de dano o fantasma consegue aguentar sem ser exorcisado | Números inteiros     | Não                  | Não     |
+| Ataque Especial  | ataque_especial  | TEXT             | Irá descrever como é o ataque especial do fantasma para o jogador                                                         | Todos os characteres | Não                  | Não     |
+| Barulhos         | barulhos         | TEST             | Irá descrever os sons produzidos pelos fantasmas antes de encontrarem o jogador                                           | Todos os characteres | Não                  | Não     |
+| Dropa uma moeda  | dropa_moeda      | BOOLEAN          | Uma variável criada apenas para definir se um fantasma carrega consigo uma moeda ou não                                   | TRUE, FALSE          | Não                  | Não     |
+| Ordem            | ordem            | INT              | DESCRIÇÃO                                                                                                                 | Números inteiros     | Não                  | Não     |
+| Dica             | dica             | TEXT             | DESCRIÇÃO                                                                                                                 | Todos os characteres | Não                  | Não     |
 
 
 
@@ -74,6 +100,7 @@ Definição: É um conjunto de salas.
 
 ## Histórico de versões
 
-| Versão | Data       | Descrição                                            | Autor                                        |
-| ------ | ---------- | ---------------------------------------------------- | -------------------------------------------- |
-| 1.0    | 14/08/2024 | Criação da página e das entidades Personagem, Mundo, Sala e Fase(incompleta) | [Davi Pierre](https://github.com/DaviPierre) |
+| Versão | Data       | Descrição                                                                                    | Autor                                        |
+| ------ | ---------- | -------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| 1.0    | 14/08/2024 | Criação da página e das entidades Personagem, Mundo, Sala e Fase(incompleta)                 | [Davi Pierre](https://github.com/DaviPierre) |
+| 1.1    | 15/08/2024 | A tabela Entidade fase foi completa e foram criadas as tabelas das entidades Arma e Fantasma | [Davi Pierre](https://github.com/DaviPierre) |
