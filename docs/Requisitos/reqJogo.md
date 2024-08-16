@@ -48,6 +48,7 @@
   - Moeda
   - Dinheiro
 - Inventário
+  - Identificação do Inventário
   - Itens encontrados
   - Capacidade de Carga
 - Mundo
@@ -90,3 +91,6 @@
 | Versão | Data       | Descrição                          | Autor                                        |
 | ------ | ---------- | ---------------------------------- | -------------------------------------------- |
 | 1.0    | 15/08/2024 | Criação dos requisitos do Trabalho | [Davi Pierre](https://github.com/DaviPierre) |
+
+
+
