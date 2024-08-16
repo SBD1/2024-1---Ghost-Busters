@@ -31,14 +31,14 @@
       - Missão secundária
       - Recompensa
 
-    - NPC contratante
+    - NPC contratado
       - Equipados
         - Arma Equipada
         - Capacete Equipado
         - Armadura Equipada
         - Amuleto Equipado
       - Preço 
-- Itens
+- Iten
   - Identificação do Item
   - Peso
   - Armadura  (Defesa e descrição)
