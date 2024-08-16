@@ -21,12 +21,30 @@
 
 ## Jogo
 
-Em um mundo assolado por assombrações, o jogador assume o papel de um herói determinado a salvar seus amigos e enfrentar entidades malignas. Com três opções de personagens e a escolha de quatro equipamentos estratégicos, cada jogada é crucial. O jogador enfrenta desafios no Central Park, combatendo o famoso Slimer e a bibliotecária fantasma, Lybrary Ghost. Ao explorar os bueiros, surge a escolha entre um restaurante e a continuação da jornada, com consequências graves para cada decisão.
-A batalha culmina no Banco da Cidade, onde o temível Vigo, um feiticeiro medieval, aguarda. Derrotar cada inimigo é vital, pois uma entidade em fuga ameaça a cidade. O confronto final ocorre com o Stay Puft, um marshmallow gigante, cuja derrota significa o resgate de um amigo. O jogo oferece a escolha entre modos fácil e difícil, desafiando os jogadores com diferentes níveis de vida e punições por falhas. Com batalhas emocionantes e um desfecho promissor, esta é apenas o início de uma história épica.
+Tudo começa no icônico Central Park, agora um campo de batalha cheio de mistérios. Armado com apenas um equipamento básico, seu personagem rapidamente descobre a gravidade da situação: fantasmas malignos tomaram conta da cidade, e o caos reina. Para sobreviver, você deve caçar esses espíritos inquietos, aprimorar seu arsenal e reunir recursos vitais. 
+
+## Características Principais
+
+- **Escolha entre três personagens únicos**: Cada personagem possui habilidades distintas, permitindo diferentes estilos de jogo.
+- **Explore o Central Park e seus arredores**: Enfrente uma variedade de fantasmas e desafios enquanto desvenda os segredos do parque.
+- **Aventure-se pelos esgotos da cidade**: Encare um ambiente claustrofóbico, repleto de perigos e criaturas fantasmagóricas.
+- **Aprimore seu arsenal**: Aprimore suas armas e ferramentas para enfrentar ameaças cada vez maiores.
+- **Ajude cidadãos e contrate aliados**: Forme a equipe de caça-fantasmas definitiva, recrutando aliados com habilidades complementares.
+- **Enfrente chefes épicos**: Lute contra inimigos colossais em batalhas intensas enquanto luta para salvar a humanidade.
+
 
 ### Como o jogo funciona?
 
----
+- **Exploração por Salas**: O jogador deve se locomover por diferentes salas em várias localizações icônicas de Nova York. Cada sala é única, repleta de inimigos, itens, NPCs e segredos a serem descobertos.
+
+- **Coleta de Recursos**: Durante a exploração, é crucial coletar novos itens e equipamentos que irão auxiliar na jornada, proporcionando vantagens em combate e na resolução de desafios.
+
+- **Progresso na História**: O jogo é composto por missões principais e secundárias, ordenadas de forma a guiar o jogador pela narrativa enquanto ele desbloqueia novas áreas e enfrenta desafios cada vez mais difíceis.
+
+- **Combate Contra Chefes**: Derrotar os chefes principais da história é essencial para o avanço. Esses inimigos liberam moedas especiais, que, quando combinadas, abrem o caminho para a parte final e mais desafiadora do jogo.
+
+
+
 
 ### Como jogar?
 
@@ -66,5 +84,6 @@ A batalha culmina no Banco da Cidade, onde o temível Vigo, um feiticeiro mediev
 | :----: | :--------: | ---------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------ |
 | `1.0`  | 08/04/2024 | Estruturação do README do projeto| [Davi Pierre](https://github.com/DaviPierre) |[Julia Gabriela](https://github.com/JuliaGabP)|
 | `1.1`  | 21/07/2024 | Atualização do README do projeto| [Julia Gabriela](https://github.com/JuliaGabP) |[Julia Gabriela](https://github.com/JuliaGabP)|
-| `1.2`  | 05/08/2024 | Correção de erros e adição do Módulo 2 no README do projeto| [Julia Gabriela](https://github.com/JuliaGabP) ||
+| `1.2`  | 05/08/2024 | Correção de erros e adição do Módulo 2 no README do projeto| [Julia Gabriela](https://github.com/JuliaGabP) |[Matheus Barros do Nascimento](https://github.com/Ninja-Haiyai)|
+| `1.3`  | 16/08/2024 | Atualização do README do projeto|[Matheus Barros do Nascimento](https://github.com/Ninja-Haiyai)|
 
