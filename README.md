@@ -33,7 +33,7 @@ Tudo começa no icônico Central Park, agora um campo de batalha cheio de misté
 - **Enfrente chefes épicos**: Lute contra inimigos colossais em batalhas intensas enquanto luta para salvar a humanidade.
 
 
-### Como o jogo funciona?
+#### Como o jogo funciona?
 
 - **Exploração por Salas**: O jogador deve se locomover por diferentes salas em várias localizações icônicas de Nova York. Cada sala é única, repleta de inimigos, itens, NPCs e segredos a serem descobertos.
 
