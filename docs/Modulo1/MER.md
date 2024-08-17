@@ -1,45 +1,40 @@
 # Modelo Entidade Relacionamento
 
 ## ENTIDADES
-- Mundo
-- Lugar
-- Coisa ruim
-- Diálogo
-- Personagem
-- PC
-- NPC
-- Equipamento
-- Fase
+- mundo
+- sala
+- personagem
+- jogador
+- fantasma
+- npc_passivo
+- npc_contratado
+- item
+- objeto
+- consumivel
+- ataque
+- defesa
+- missao
+- grupo
+- inventario
+- objeto_interativo
 
 ## ATRIBUTOS
-- Mundo:
-  - <ins>Id_mundo</ins>
-  - Dificuldade
-- Lugar:
-  - <ins>Id_lugar</ins>
-  - Descrição
-- Coisa ruim:
-  - <ins>Id_cr</ins>
-  - Descrição
-  - Consequência
-- Diálogo:
-  - <ins>Id_dial</ins>
-  - Descrição
-- Personagem:
+- mundo:
+  - <ins></ins>
+- sala:
+  - <ins></ins>
+- personagem:
+  - <ins></ins>
+- jogador:
+  - <ins></ins>
+- fantasma:
   - <ins>Nome</ins>
-  - Vida
-  - Características
-- PC
-- NPC:
-  - Habilidade
-- Equipamento:
-  - <ins>Nome_equi</ins>
-  - Dano
-  - Ataque
-  - Descrição
-- Fase:
-  - <ins>Numeração</ins>
-
+- npc_passivo:
+- npc_contratado:
+- item:
+  - <ins></ins>
+- objeto:
+  - <ins></ins>
 ## RELACIONAMENTOS
 
 ### Lugar está no mundo:
