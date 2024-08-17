@@ -1,1 +1,9 @@
+# Impede o commit de arquivos específicos ou tipos de arquivo específicos
+
+# NOMES DE ARQUIVOS ESPECÍFICOS
+
 makefile
+
+# TIPOS DE ARQUIVOS ESPECÍFICOS
+
+.txt
