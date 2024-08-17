@@ -23,7 +23,7 @@
 
 Tudo começa no icônico Central Park, agora um campo de batalha cheio de mistérios. Armado com apenas um equipamento básico, seu personagem rapidamente descobre a gravidade da situação: fantasmas malignos tomaram conta da cidade, e o caos reina. Para sobreviver, você deve caçar esses espíritos inquietos, aprimorar seu arsenal e reunir recursos vitais. 
 
-## Características Principais
+#### Características Principais
 
 - **Escolha entre três personagens únicos**: Cada personagem possui habilidades distintas, permitindo diferentes estilos de jogo.
 - **Explore o Central Park e seus arredores**: Enfrente uma variedade de fantasmas e desafios enquanto desvenda os segredos do parque.
@@ -54,8 +54,8 @@ Tudo começa no icônico Central Park, agora um campo de batalha cheio de misté
 
 | Módulo | Link da gravação                                                                                    | Data       |
 | ------ | --------------------------------------------------------------------------------------------------- | ---------- |
-| 1      | [Apresentação Módulo 1](https://github.com/SBD1/2024-1---Ghost-Busters/tree/main/docs/Modulo1)| 22/07/24 |
-| 2      | [Apresentação Módulo 2](https://github.com/SBD1/2024-1---Ghost-Busters/tree/main/docs/Modulo2)| 19/08/24 |
+| 1      | [Apresentação Módulo 1](https://youtu.be/zVROjzIRNXc)| 22/07/24 |
+| 2      | [Apresentação Módulo 2]()| 19/08/24 |
 | 3      | [Apresentação Módulo 3]()| 09/09/24 |
 
 ## Entregas
@@ -85,5 +85,5 @@ Tudo começa no icônico Central Park, agora um campo de batalha cheio de misté
 | `1.0`  | 08/04/2024 | Estruturação do README do projeto| [Davi Pierre](https://github.com/DaviPierre) |[Julia Gabriela](https://github.com/JuliaGabP)|
 | `1.1`  | 21/07/2024 | Atualização do README do projeto| [Julia Gabriela](https://github.com/JuliaGabP) |[Julia Gabriela](https://github.com/JuliaGabP)|
 | `1.2`  | 05/08/2024 | Correção de erros e adição do Módulo 2 no README do projeto| [Julia Gabriela](https://github.com/JuliaGabP) |[Matheus Barros do Nascimento](https://github.com/Ninja-Haiyai)|
-| `1.3`  | 16/08/2024 | Atualização do README do projeto|[Matheus Barros do Nascimento](https://github.com/Ninja-Haiyai)|
-
+| `1.3`  | 16/08/2024 | Atualização do README do projeto|[Matheus Barros do Nascimento](https://github.com/Ninja-Haiyai)| [Julia Gabriela](https://github.com/JuliaGabP)|
+| `1.4`  | 17/08/2024 | Inserção do link de apresentação do Módulo 1 |[Julia Gabriela](https://github.com/JuliaGabP)|
