@@ -52,7 +52,7 @@
 
 | Variável            | Nome da variável | Tipo da variável | Valores permitidos                     | Possui valores nulos | É chave |
 | ------------------- | ---------------- | ---------------- | -------------------------------------- | -------------------- | ------- |
-| Dica                | dica             | TEXT             | Letras, characteres especiais, números | Não                  | Não     |
+| Dica                | dica             | TEXT             | Letras, characteres especiais, números | Sim                  | Não     |
 | Barulho             | barulho          | VARCHAR(20)      | Characteres                            | Sim                  | Não     |
 | Habiildade especial | habilidade       | TEXT             | Letras, characteres especiais, números | Não                  | Não     |
 | Descrição de ataque | descricao_ataque | TEXT             | Letras, characteres especiais, números | Não                  | Não     |
@@ -62,12 +62,7 @@
 
 #### Descrição: Personagem que o Jogador pode chamar para seu grupo por um preço.
 
-| Variável            | Nome da variável | Tipo da variável | Valores permitidos                     | Possui valores nulos | É chave |
-| ------------------- | ---------------- | ---------------- | -------------------------------------- | -------------------- | ------- |
-| Preço               | preco            | INT              | Números inteiros                       | Não                  | Não     |
-| Dano                | dano             | INT              | Números inteiros                       | Não                  | Não     |
-| Defesa              | defesa           | INT              | Números inteiros                       | Não                  | Não     |
-| Descrição do ataque | descricao_ataque | TEXT             | Letras, characteres especiais, números | Não                  | Não     |
+
 
 ## Entidade npc passivo
 
