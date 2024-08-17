@@ -10,102 +10,151 @@ Novas tabelas criadas durante a normalização devem ser documentadas.
 <br>
 Descrições de tabelas existentes devem ser revisadas para remover redundâncias e atributos compostos.
 
-## Entidade Personagem 
+## Entidade inventario
 
- Definição: A entidade Personagem descreve os atributos e características de todas os possíveis jogadores e dos fantasmas a serem enfrenteados.<br>
+#### Descrição: Conjunto de Itens coletado pelo Jogador.
 
-| Variável         | Nome da Variável | Tipo da Variável | Descrição                                                                                                               | Valores Permitidos | Possui Valores Nulos | É Chave |
-| ---------------- | ---------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------ | -------------------- | ------- |
-| Identificação    | id               | SERIAL           | Variável criada para referenciar um personagem específico                                                               |                    | Não                  | Sim     |
-| Nome             | nome             | VARCHAR(30)      | Nome pelo qual os outros personagens referem-se a um personagem específico                                              |                    | Não                  | Não     |
-| Descrição Física | descricao_fisica | TEXT             | Conjunto de características físicas que descrevem o personagem, como cabelo, cor de pele, textura, etc.                 |                    | Não                  | Não     |
-| Força            | forca            | INT              | Atributo que define a capacidade atlética do personagem                                                                 |                    | Não                  | Não     |
-| Agilidade        | agilidade        | INT              | Atributo que define os reflexos do personagem, incluindo habilidades acrobáticas, furtivas e de manipulação com as mãos |                    | Não                  | Não     |
-| Inteligência     | inteligencia     | INT              | Atributo que define a capacidade de raciocínio e conhecimento investigativo, histórico e tecnológico do personagem      |                    | Não                  | Não     |
-| Vida Inicial     | vida_inicial     | INT              | Define a resistência do personagem, indicando quanto de dano ele pode suportar antes de desmaiar ou morrer              |                    | Não                  | Não     |
+| Variável      | Nome da variável | Tipo da variável | Valores permitidos | Possui valores nulos | É chave |
+| ------------- | ---------------- | ---------------- | ------------------ | -------------------- | ------- |
+| Identificação | id               | SERIAL           | Números inteiros   | Não                  | Sim     |
+| Capacidade    | capacidade       | INT              | Números inteiros   | Não                  | Não     |
 
+## Entidade mundo
 
-## Entidade Mundo 
+#### Descrição: Save de todas as consequências das ações do Jogador.
 
-Definição: O mundo é onde todas as informações são salvas
+| Variável              | Nome da variável | Tipo da variável | Valores permitidos | Possui valores nulos | É chave |
+| --------------------- | ---------------- | ---------------- | ------------------ | -------------------- | ------- |
+| Identificação         | id               | SERIAL           | Números inteiros   | Não                  | Sim     |
+| Nome                  | nome             | VARCHAR(30)      | Characteres        | Não                  | Não     |
+| Sala atual do jogador | sala_atual       | VARCHAR(30)      | Characteres        | Não                  | Não     |
+| Status                | status           | VARCHAR(10)      | Characteres        | Não                  | Não     |
+| Dificuldade           | dificuldade      | INT              | Números inteiros   | Não                  | Não     |
 
-| Variável                    | Nome da Variável     | Tipo da Variável | Descrição                                                                                                                                 | Valores Permitidos | Possui Valores Nulos | É Chave |
-| --------------------------- | -------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | -------------------- | ------- |
-| Identificação               | id                   | SERIAL           | Variável criada para referenciar um mundo específico                                                                                      |                    | Não                  | Sim     |
-| Nome                        | nome                 | VARCHAR(30)      | Forma mais simples de se referir ao mundo                                                                                                 |                    | Não                  | Não     |
-| Dificuldade                 | dificuldade          | INT              | Define o quão desafiador o mundo será para o jogador                                                                                      |                    | Não                  | Não     |
-| Status                      | status               | VARCHAR(20)      | Descrição                                                                                                                                 |                    | Não                  | Não     |
-| Identificação do Personagem | id_personagem        | SERIAL           | Variável criada para referenciar um personagem específico                                                                                 |                    | Não                  | Sim     |
-| Vida Atual                  | vida_atual           | INT              | Quantidade de dano que o personagem do jogador ainda pode suportar até desmaiar ou morrer                                                 |                    | Não                  | Não     |
-| Fase Atual                  | fase_atual           | INT              | Definição                                                                                                                                 |                    | Não                  | Não     |
-| Moedas Coletadas            | moedas_coletadas     | INT              | Moedas são itens especiais que alguns fantasmas podem deixar para trás ao morrer; este atributo mantém o número total de moedas coletadas |                    | Não                  | Não     |
-| Fantasmas Derrotados        | fantasmas_derrotados | INT              | Este atributo mantém a contagem de quantos fantasmas foram derrotados durante a jornada do personagem do jogador                          |                    | Não                  | Não     |
+## Entidade personagem
 
+#### Descrição: Conjunto de entidades humanoides e espirituais do jogo.
 
+| Variável         | Nome da variável | Tipo da variável | Valores permitidos                     | Possui valores nulos | É chave |
+| ---------------- | ---------------- | ---------------- | -------------------------------------- | -------------------- | ------- |
+| Identificação    | id               | SERIAL           | Números inteiros                       | Não                  | Sim     |
+| Nome             | nome             | VARCHAR(30)      | Characteres                            | Não                  | Não     |
+| Vida             | vida             | INT              | Números inteiros                       | Não                  | Não     |
+| Vida Atual       | vida_atual       | INT              | Números inteiros                       | Não                  | Não     |
+| Descrição física | descricao_fisisa | TEXT             | Letras, characteres especiais, números | Não                  | Não     |
 
-## Entidade Sala 
+## Entidade jogador
 
-Definição: Ambiente onde os personagens podem intereagir com o mundo e com eles mesmos 
+#### Descrição: Personagem que será controlado pelo jogador.
 
-| Variável              | Nome da Variável | Tipo da Variável | Descrição                                                                                                                           | Valores Permitidos | Possui Valores Nulos | É Chave |
-| --------------------- | ---------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------ | -------------------- | ------- |
-| Identificação         | id               | SERIAL           | Variável criada para referenciar uma sala específica                                                                                |                    | Não                  | Sim     |
-| Nome                  | nome             | VARCHAR(30)      | Nome da sala que serve como uma definição secundária para o jogador ter uma noção inicial do ambiente ao seu redor                  |                    | Não                  | Não     |
-| Descrição             | descricao        | TEXT             | Apresentação detalhada do ambiente ao redor do jogador, incluindo ligações com outras salas e objetos interativos e não interativos |                    | Não                  | Não     |
-| Identificação da Fase | id_fase          | INT              | Variável criada para referenciar uma fase específica                                                                                |                    | Não                  | Sim     |
-| Ordem                 | ordem            | INT              | Escolhas que o jogador pode tomar dentro de uma sala                                                                                |                    | Não                  | Não     |
-| Vida Restaurada       | vida_restaurada  | INT              | Quantidade de vida que pode ser restaurada pelo jogador em uma sala específica                                                      |                    | Sim                  | Não     |
+| Variável         | Nome da variável | Tipo da variável | Valores permitidos | Possui valores nulos | É chave |
+| ---------------- | ---------------- | ---------------- | ------------------ | -------------------- | ------- |
+| Moedas Coletadas | moedas_coletadas | INT              | Números inteiros   | Não                  | Não     |
+| Dinheiro         | dinheiro         | INT              | Números inteiros   | Não                  | Não     |
+| Atributos        | atributos        | INT              | Números inteiros   | Não                  | Não     |
+| Resposta         | resposta         | ENUM             | "sim", "não"       | Não                  | Não     |
 
+## Entidade fantasma
+ 
+#### Descrição: Personagem que antagonisa o Jogador.
 
-## Entidade Fase 
+| Variável            | Nome da variável | Tipo da variável | Valores permitidos                     | Possui valores nulos | É chave |
+| ------------------- | ---------------- | ---------------- | -------------------------------------- | -------------------- | ------- |
+| Dica                | dica             | TEXT             | Letras, characteres especiais, números | Sim                  | Não     |
+| Barulho             | barulho          | VARCHAR(20)      | Characteres                            | Sim                  | Não     |
+| Habiildade especial | habilidade       | TEXT             | Letras, characteres especiais, números | Não                  | Não     |
+| Descrição de ataque | descricao_ataque | TEXT             | Letras, characteres especiais, números | Não                  | Não     |
+| Dano causado        | dano_causado     | INT              | Números inteiros                       | Não                  | Não     |
 
-Definição: É um conjunto de salas.
+## Entidade npc contratado  
 
-| Variável               | Nome da Variável | Tipo da Variável | Descrição                                                           | Valores Permitidos | Possui Valores Nulos | É Chave |
-| ---------------------- | ---------------- | ---------------- | ------------------------------------------------------------------- | ------------------ | -------------------- | ------- |
-| Identificação          | id               | SERIAL           | Variável criada para referenciar uma fase específica                |                    | Não                  | Sim     |
-| Nome                   | nome             | VARCHAR(30)      | Nome pelo qual a fase será referida para o jogador                  |                    | Não                  | Não     |
-| Descrição              | descricao        | TEXT             | Apresentação detalhada da fase para o jogador                       |                    | Não                  | Não     |
-| Ordem                  | ordem            | INT              | Descrição                                                           |                    | Não                  | Não     |
-| Identificação do Mundo | id_mundo         | INT              | Variável criada para referenciar um mundo específico                |                    | Não                  | Sim     |
-| Coisa Ruim             | coisa_ruim       | TEXT             | Consequência que o jogador sofrerá ao ser derrotado por um fantasma |                    | Não                  | Não     |
+#### Descrição: Personagem que o Jogador pode chamar para seu grupo por um preço.
 
+| Variável            | Nome da variável | Tipo da variável | Valores permitidos                     | Possui valores nulos | É chave |
+| ------------------- | ---------------- | ---------------- | -------------------------------------- | -------------------- | ------- |
+| Preço               | preco            | INT              | Números inteiros                       | Não                  | Não     |
+| Dano                | dano             | INT              | Números inteiros                       | Não                  | Não     |
+| Defesa              | defesa           | INT              | Números inteiros                       | Não                  | Não     |
+| Descrição do ataque | descricao_ataque | TEXT             | Letras, characteres especiais, números | Não                  | Não     |
 
-## Entidade Arnma 
+## Entidade npc passivo
 
-Definição: São os equipamentos que o jogador vai utilizar para poder derrotar os fantasmas
+#### Descrição: Personagem que entrega missões secundárias para o Jogador.
 
-| Variável            | Nome da variável | Tipo da variável | Descrição                                                                                    | Valores permitidos | Possui valores nulos | É chave |
-| ------------------- | ---------------- | ---------------- | -------------------------------------------------------------------------------------------- | ------------------ | -------------------- | ------- |
-| Identificação       | id               | SERIAL           | Uma variável criada para podermos nos referir a uma arma específica                          |                    | Não                  | Sim     |
-| Nome                | nome             | VARCHAR(30)      | É a forma com que a arma será referida para o jogador                                        |                    | Não                  | Não     |
-| Descrição física    | descricao_fisica | TEXT             | Irá descrever para o jogador a aparência física da arma, ou seja, textura, cor, formato, etc |                    | Não                  | Não     |
-| Dano médio          | dano_medio       | INT              | Apresentará a quantidade de vida que será removida do monstro ao atacar com a arma           |                    | Não                  | Não     |
-| Descrição do ataque | desricao_ataque  | TEXT             | Descreve o que acontece ao atacar com uma arma                                               |                    | Não                  | Não     |
-| Tipo da arma        | tipo             | VARCHAR(20)      | Diz qual o atributo base para se usar a arma                                                 |                    | Não                  | Não     |
+| Variável | Nome da variável | Tipo da variável | Valores permitidos                     | Possui valores nulos | É chave |
+| -------- | ---------------- | ---------------- | -------------------------------------- | -------------------- | ------- |
+| Diálogo  | dialogo          | TEXT             | Letras, characteres especiais, números | Não                  | Não     |
 
-## Entidade Fantasma 
+## Entidade item
 
-| Variável         | Nome da Variável | Tipo da Variável | Descrição                                                                                            | Valores Permitidos | Possui Valores Nulos | É Chave |
-| ---------------- | ---------------- | ---------------- | ---------------------------------------------------------------------------------------------------- | ------------------ | -------------------- | ------- |
-| Identificação    | id               | SERIAL           | Variável criada para referenciar um fantasma específico                                              |                    | Não                  | Sim     |
-| Nome             | nome             | VARCHAR(30)      | Nome pelo qual o fantasma será referido para o jogador                                               |                    | Não                  | Não     |
-| Descrição Física | descricao_fisica | TEXT             | Descreve a aparência física do fantasma, incluindo textura, cor, formato, etc.                       |                    | Não                  | Não     |
-| Vida             | vida             | INT              | Define a resistência do fantasma, indicando quanto de dano ele pode suportar antes de ser exorcizado |                    | Não                  | Não     |
-| Ataque Especial  | ataque_especial  | TEXT             | Descreve como é o ataque especial do fantasma                                                        |                    | Não                  | Não     |
-| Barulhos         | barulhos         | TEXT             | Descreve os sons produzidos pelos fantasmas antes de encontrarem o jogador                           |                    | Não                  | Não     |
-| Dropa uma Moeda  | dropa_moeda      | BOOLEAN          | Variável criada para definir se um fantasma carrega consigo uma moeda ou não                         |                    | Não                  | Não     |
-| Ordem            | ordem            | INT              | Descrição                                                                                            |                    | Não                  | Não     |
-| Dica             | dica             | TEXT             | Descrição                                                                                            |                    | Não                  | Não     |
+#### Descrição: Objetos que serão coletados pelo jogador a fim de facilitar sua jornada.
 
+| Variável                      | Nome da variável | Tipo da variável | Valores permitidos                     | Possui valores nulos | É chave |
+| ----------------------------- | ---------------- | ---------------- | -------------------------------------- | -------------------- | ------- |
+| Nome                          | nome             | VARCHAR(30)      | Characteres                            | Não                  | Sim     |
+| Utilidade                     | utilidade        | VARCHAR(60)      | Characteres                            | Sim                  | Não     |
+| Dano                          | dano             | INT              | Números inteiros                       | Sim                  | Não     |
+| Pontos de Defesa              | pontos_de_defesa | INT              | Números inteiros                       | Sim                  | Não     |
+| Restauração de pontos de vida | restauracao_vida | INT              | Números inteiros                       | Sim                  | Não     |
+| Tipo                          | tipo             | ENUM             | "dano", "defesa", "vida", "utilidade"  | Não                  | Não     |
+| Peso                          | peso             | INT              | Números inteiros                       | Não                  | Não     |
+| Descrição                     | descricao        | TEXT             | Letras, characteres especiais, números | Não                  | Não     |
 
+## Entidade grupo
 
+#### Descrição: Conunto de Jogador e Npcs Contratados que são todos controlados pelo jogador.
 
+| Variável      | Nome da variável | Tipo da variável | Valores permitidos | Possui valores nulos | É chave |
+| ------------- | ---------------- | ---------------- | ------------------ | -------------------- | ------- |
+| Identificação | id               | SERIAL           | Números inteiros   | Não                  | Sim     |
+| Nome          | nome             | VARCHAR(30)      | Characteres        | Não                  | Não     |
+| Membro 1      | membro_1         | VARCHAR(30)      | Characteres        | Não                  | Não     |
+| Membro 2      | membro_2         | VARCHAR(30)      | Characteres        | Sim                  | Não     |
+| Membro 3      | membro_3         | VARCHAR(30)      | Characteres        | Sim                  | Não     |
+
+## Entidade objeto interativo
+
+#### Descrição: Objetos que o Jogador pode realizar ações com eles.
+
+| Variável  | Nome da variável | Tipo da variável | Valores permitidos                     | Possui valores nulos | É chave |
+| --------- | ---------------- | ---------------- | -------------------------------------- | -------------------- | ------- |
+| Nome      | nome             | VARCHAR(30)      | Characteres                            | Não                  | Sim     |
+| Descrição | descricao        | TEXT             | Letras, characteres especiais, números | Não                  | Não     |
+| Status    | status           | VARCHAR(20)      | Characteres                            | Não                  | Não     |
+| Ação      | acao             | TEXT             | Letras, characteres especiais, números | Não                  | Não     |
+
+## Entidade sala
+
+#### Descrição: Ambiente em que os Persoangens convivem e podem interagir.
+
+| Variável            | Nome da variável    | Tipo da variável | Valores permitidos                     | Possui valores nulos | É chave |
+| ------------------- | ------------------- | ---------------- | -------------------------------------- | -------------------- | ------- |
+| Identificação       | id                  | SERIAL           | Números inteiros                       | Não                  | Sim     |
+| Nome                | nome                | VARCHAR(30)      | Characteres                            | Não                  | Não     |
+| Descrição           | descricao           | TEXT             | Letras, characteres especiais, números | Não                  | Não     |
+| Cardinalidade Norte | cardinalidade_norte | INT              | Números inteiros                       | Sim                  | Não     |
+| Cardinalidade Leste | cardinalidade_leste | INT              | Números inteiros                       | Sim                  | Não     |
+| Cardinalidade Sul   | cardinalidade_sul   | INT              | Números inteiros                       | Sim                  | Não     |
+| Cardinalidade Oeste | cardinalidade_oeste | INT              | Números inteiros                       | Sim                  | Não     |
+
+## Entidade missão 
+
+#### Descrição: Tarefas a serem cumpridas pelo jogador.
+
+| Variável        | Nome da variável | Tipo da variável | Valores permitidos                     | Possui valores nulos | É chave |
+| --------------- | ---------------- | ---------------- | -------------------------------------- | -------------------- | ------- |
+| Identificação   | id               | SERIAL           | Números inteiros                       | Não                  | Sim     |
+| Nome            | nome             | VARCHAR(30)      | Characteres                            | Não                  | Não     |
+| Ordem           | ordem            | INT              | Números inteiros                       | Nâo                  | Não     |
+| Descrição       | descrisao        | TEXT             | Letras, characteres especiais, números | Não                  | Não     |
+| Obrigatóriedade | obrigatoriedade  | ENUM             | "sim", "não"                           | Não                  | Não     |
+| Status          | status           | VARCHAR(20)      | Characteres                            | Não                  | Não     |
 
 
 ## Histórico de versões
 
-| Versão | Data       | Descrição                                                                               | Autor                                        |
-| ------ | ---------- | --------------------------------------------------------------------------------------- | -------------------------------------------- |
-| 1.0    | 14/08/2024 | Criação da página e das entidades Personagem, Mundo, Sala e Fase (incompleta)           | [Davi Pierre](https://github.com/DaviPierre) |
-| 1.1    | 15/08/2024 | Completação da tabela Entidade Fase e criação das tabelas das entidades Arma e Fantasma | [Davi Pierre](https://github.com/DaviPierre) |
+| Versão | Data       | Descrição                                                                                                                                                                       | Autor                                        |
+| ------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| 1.0    | 14/08/2024 | Criação da página e das entidades Personagem, Mundo, Sala e Fase (incompleta)                                                                                                   | [Davi Pierre](https://github.com/DaviPierre) |
+| 1.1    | 15/08/2024 | Completação da tabela Entidade Fase e criação das tabelas das entidades Arma e Fantasma                                                                                         | [Davi Pierre](https://github.com/DaviPierre) |
+| 1.2    | 17/08/2024 | Finalização do Dicionário de Dados com as entidades Inventário, Mundo, Personagem, Jogador, Fantasma, NPC passivo, NPC contratado, Item, Grupo, Objeto Interativo, Sala, Missão | [Davi Pierre](https://github.com/DaviPierre) |
