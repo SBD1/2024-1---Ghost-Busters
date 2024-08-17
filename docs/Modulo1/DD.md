@@ -2,7 +2,7 @@
 
 > "Um dicionário de dados é uma coleção de nomes, atributos e definições sobre elementos de dados que estão sendo usados ​​em seu estudo. [...] O objetivo de um dicionário de dados é explicar o que todos os nomes e valores de variáveis ​​em sua planilha realmente significam. Em um dicionário de dados podem ser encontrados dados sobre os nomes das variáveis ​​exatamente como aparecem na planilha, nomes de variáveis ​​curtos (mas legíveis por humanos), o intervalo de valores ou valores aceitos para a variável, descrição da variável e outras informções pertinentes."(Dados Científicos: como construir metadados, descrição, readme, dicionário-de-dados e mais; Agência de Bibliotecas e Coleções Digitais da Universidade de São Paulo)
 
-## Entidade inventáreio
+## Entidade inventario
 
 #### Descrição: Conjunto de Itens coletado pelo Jogador.
 
@@ -79,7 +79,7 @@
 | Variável                      | Nome da variável | Tipo da variável | Valores permitidos                     | Possui valores nulos | É chave |
 | ----------------------------- | ---------------- | ---------------- | -------------------------------------- | -------------------- | ------- |
 | Nome                          | nome             | VARCHAR(30)      | Characteres                            | Não                  | Sim     |
-| Utilidade                     | utilidade        | VARCHAR(30)      | Characteres                            | Sim                  | Não     |
+| Utilidade                     | utilidade        | VARCHAR(60)      | Characteres                            | Sim                  | Não     |
 | Dano                          | dano             | INT              | Números inteiros                       | Sim                  | Não     |
 | Pontos de Defesa              | pontos_de_defesa | INT              | Números inteiros                       | Sim                  | Não     |
 | Restauração de pontos de vida | restauracao_vida | INT              | Números inteiros                       | Sim                  | Não     |
