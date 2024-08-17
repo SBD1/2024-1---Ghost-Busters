@@ -23,7 +23,6 @@
 | Status                | status           | VARCHAR(10)      | Characteres        | Não                  | Não     |
 | Dificuldade           | dificuldade      | INT              | Números inteiros   | Não                  | Não     |
 
-
 ## Entidade personagem
 
 #### Descrição: Conjunto de entidades humanoides e espirituais do jogo.
@@ -35,7 +34,6 @@
 | Vida             | vida             | INT              | Números inteiros                       | Não                  | Não     |
 | Vida Atual       | vida_atual       | INT              | Números inteiros                       | Não                  | Não     |
 | Descrição física | descricao_fisisa | TEXT             | Letras, characteres especiais, números | Não                  | Não     |
-
 
 ## Entidade jogador
 
@@ -60,7 +58,6 @@
 | Descrição de ataque | descricao_ataque | TEXT             | Letras, characteres especiais, números | Não                  | Não     |
 | Dano causado        | dano_causado     | INT              | Números inteiros                       | Não                  | Não     |
 
-
 ## Entidade npc contratado  
 
 #### Descrição: Personagem que o Jogador pode chamar para seu grupo por um preço.
@@ -71,7 +68,6 @@
 | Dano                | dano             | INT              | Números inteiros                       | Não                  | Não     |
 | Defesa              | defesa           | INT              | Números inteiros                       | Não                  | Não     |
 | Descrição do ataque | descricao_ataque | TEXT             | Letras, characteres especiais, números | Não                  | Não     |
-
 
 ## Entidade npc passivo
 
@@ -119,7 +115,6 @@
 | Status    | status           | VARCHAR(20)      | Characteres                            | Não                  | Não     |
 | Ação      | acao             | TEXT             | Letras, characteres especiais, números | Não                  | Não     |
 
-
 ## Entidade sala
 
 #### Descrição: Ambiente em que os Persoangens convivem e podem interagir.
@@ -134,7 +129,6 @@
 | Cardinalidade Sul   | cardinalidade_sul   | INT              | Números inteiros                       | Sim                  | Não     |
 | Cardinalidade Oeste | cardinalidade_oeste | INT              | Números inteiros                       | Sim                  | Não     |
 
-
 ## Entidade missão 
 
 #### Descrição: Tarefas a serem cumpridas pelo jogador.
@@ -147,7 +141,6 @@
 | Descrição       | descrisao        | TEXT             | Letras, characteres especiais, números | Não                  | Não     |
 | Obrigatóriedade | obrigatoriedade  | ENUM             | "sim", "não"                           | Não                  | Não     |
 | Status          | status           | VARCHAR(20)      | Characteres                            | Não                  | Não     |
-
 
 ## Histórico de versões
 
