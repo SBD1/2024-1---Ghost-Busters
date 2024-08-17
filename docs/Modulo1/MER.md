@@ -17,62 +17,87 @@
 - grupo
 - inventario
 - objeto_interativo
+- equipamento
 
 ## ATRIBUTOS
 - mundo:
-  - <ins></ins>
+  - <ins>id</ins>
+  - sala_atual
+  - missao_atual
+  - sala_atual
+  - nome
+  - status
+  - dificuldade
 - sala:
-  - <ins></ins>
+  - <ins>id</ins>
+  - nome
+  - descricao
+  - cardinalidade_norte
+  - cardinalidade_sul
+  - cardinalidade_leste
+  - cardinalidade_oeste
 - personagem:
-  - <ins></ins>
+  - <ins>id</ins>
+  - nome
+  - vida
+  - descricao_fisica
+  - vida_atual
 - jogador:
-  - <ins></ins>
+  -moedas_coletadas
+  -atributos
+  -dinheiro
+  -resposta
 - fantasma:
-  - <ins>Nome</ins>
+  - descricao_ataque
+  - habilidade
+  - coisa_ruim
+  - drop
+  - dica
+  - barulho
+  - dano_causado
 - npc_passivo:
+  - dialogo
+  - recompensa
 - npc_contratado:
+  - dano
+  - preco
+  - defesa
 - item:
-  - <ins></ins>
+  - <ins>id</ins>
+  - peso
+  - descricao
 - objeto:
-  - <ins></ins>
+  - utilidade
+- consumivel
+  - restauracao_vida
+- ataque
+  - dano
+- defesa
+  - pontos_de_defesa
+- missao
+  - <ins>id</ins>
+  - descricao
+  - ordem
+  - nome
+- grupo
+  - <ins>id</ins>
+  - nome
+  - membro_1
+  - membro_2
+  - membro_3
+- inventario
+  - <ins>id</ins>
+- objeto_interativo
+  - <ins>nome</ins>
+  - acao
+  - status
+  - requisito
+  - descricao
+- equipamento
+  - 
 ## RELACIONAMENTOS
 
-### Lugar está no mundo:
-- Lugar está em um e apenas um mundo
-- Mundo possui no mínimo um e no máximo vários lugares
-
-### PC está no lugar:
-- PC pode estar em um e apenas um lugar
-- Lugar pode ser ocupado por no mínimo e no máximo um PC
-
-### PC possui equipamento:
-- PC possui no mínimo um equipamento e no máximo vários
-- Equipamento pode ser de um e apenas um PC
-
-### PC passa fase:
-- PC passa nenhuma ou várias fases
-- Fase pode ser passada por um e apenas um PC
-
-### PC mata NPC:
-- PC mata nenhum ou vários NPC
-- NPC mata nenhum ou um PC
-
-### NPC está na fase:
-- NPC pertence a uma única fase
-- Fase possui apenas um único NPC
-
-### Personagem fala diálogo:
-- Personagem fala nenhum ou vários diálogos
-- Diálogo pode ser falado por um único personagem
-
-### Lugar possui fase:
-- Lugar possui uma ou várias fases
-- Fase é de um e apenas um lugar
-
-### Fase possui coisa ruim:
-- Fase possui uma coisa ruim
-- Coisa ruim pode ser de uma ou várias fases
-
+## VERSÕES
 | Versão |    Data    | Descrição               | Autor                                                                                                                 |
 | :----: | :--------: | ----------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | 1.0  | 18/07/2024 | Criação do documento MER | [Julia Gabriela](https://github.com/JuliaGabP)                                                                          |
@@ -80,3 +105,4 @@
 | 1.2  | 19/07/2024 | Atualização do documento MER| [Julia Gabriela](https://github.com/JuliaGabP) | 
 | 1.3  | 22/07/2024 | Atualização do documento MER| [Matheus Barros](https://github.com/Ninja-Haiyai) | 
 | 1.4  | 22/07/2024 | Atualização do documento MER| [Julia Gabriela](https://github.com/JuliaGabP) | 
+| 1.5  | 17/08/2024 | Atualização do documento MER| [Julia Gabriela](https://github.com/JuliaGabP) | 
