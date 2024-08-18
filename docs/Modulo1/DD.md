@@ -68,6 +68,7 @@
 | Dano                  | dano              | INT               | Números inteiros                      | Não                 | Não     |
 | Defesa                | defesa            | INT               | Números inteiros                      | Não                 | Não     |
 | Descrição do ataque | descricao_ataque  | TEXT              | Letras, caracteres especiais, números | Não                 | Não     |
+| Situação | situacao | BOOLEAN | TRUE, FALSE | Não | Não | 
 
 ## Entidade npc_passivo
 
