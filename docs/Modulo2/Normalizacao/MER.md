@@ -9,85 +9,123 @@
 
 ## ENTIDADES
 - mundo
-- fase
-- personagem
-- arma
 - sala
+- personagem
+- jogador
 - fantasma
+- npc_passivo
+- npc_contratado
+- item
+- missao
+- grupo
+- inventario
+- objeto_interativo
 
 ## ATRIBUTOS
 - mundo:
   - <ins>id</ins>
-  - dificuldade
+  - sala_atual
   - nome
   - status
-  - vida_atual
-  - fase_atual
-  - moedas_coletadas
-  - fantasmas_derrotados
-- fase:
-  - <ins>id</ins>
-  - nome
-  - ordem
-  - descricao
-  - coisa_ruim
-- personagem:
-  - <ins>id</ins>
-  - nome
-  - forca
-  - agilidade
-  - inteligencia
-  - vida_inicial
-  - descricao_fisica
-- arma:
-  - <ins>id</ins>
-  - tipo
-  - nome
-  - dano_medio
-  - descricao_fisica
-  - descricao_ataque
+  - dificuldade
 - sala:
   - <ins>id</ins>
   - nome
-  - ordem
   - descricao
-  - vida_restaurada
-- fantasma:
+  - cardinalidade_norte
+  - cardinalidade_sul
+  - cardinalidade_leste
+  - cardinalidade_oeste
+- personagem:
   - <ins>id</ins>
-  - dica
+  - nome
   - vida
+  - descricao_fisica
+  - vida_atual
+- jogador:
+  - moedas_coletadas
+  - atributos
+  - dinheiro
+  - resposta
+- fantasma:
+  - descricao_ataque
+  - habilidade
+  - dica
+  - barulho
+  - dano_causado
+- npc_passivo:
+  - dialogo
+- npc_contratado:
+  - dano
+  - preco
+  - defesa
+  - descricao_ataque
+  - situacao
+- item:
+  - <ins>nome</ins>
+  - peso
+  - descricao
+  - utilidade
+  - restauracao_vida
+  - dano
+  - pontos_de_defesa
+- missao
+  - <ins>id</ins>
   - nome
   - ordem
-  - barulho
   - descricao
-  - dropa_moeda
-  - ataque_especial
-- personagemarma:
+  - status
+  - obrigatoriedade
+- grupo
   - <ins>id</ins>
-
+  - nome
+  - membro_1
+  - membro_2
+  - membro_3
+- inventario
+  - <ins>id</ins>
+  - capacidade
+- objeto_interativo
+  - <ins>nome</ins>
+  - acao
+  - status
+  - descricao
 ## RELACIONAMENTOS
-
-### personagem e mundo:
-- personagem pode estar associado a vários mundos
-- mundo possui apenas um personagem
-
-### mundo e fase:
-- mundo pode ter várias fases
-- fase depende de um mundo
-
-### sala e fantasma:
-- sala pode ter no máximo um fantasma
-- fantasma está no máximo em uma sala
-
-### personagem e arma:
-- personagem possui muitas armas
-- armas podem ser de vários personagens
-
-### fase e sala:
-- fase pode possuir várias salas
-- sala pertence a uma fase
+#### mundo-sala
+(1,n)------(n,n)
+#### mundo-personagem
+(0,n)------(1,n)
+#### personagem-sala
+(0,1)------(1,1)
+#### jogador-objeto_interativo
+(0,1)------(0,n)
+#### jogador-inventario
+(1,1)------(1,1)
+#### jogador-item
+(0,n)------(0,n)
+#### jogador-grupo
+(1,1)------(1,1)
+#### jogador-missao
+(1,1)------(0,n)
+#### fantasma-item
+(1,n)------(1,1)
+#### npc_passivo-item
+(0,n)------(1,1)
+#### npc_passivo-missao
+(0,1)------(1,1)
+#### npc_contratado-grupo
+(0,1)------(0,n)
+#### item-objeto_interativo
+(0,1)------(0,n)
+#### item-inventario
+(0,n)------(0,1)
+#### missao-sala
+(0,1)------(1,1)
+#### missao-objeto_interativo
+(0,1)------(0,1)
 
 | Versão |    Data    | Descrição                                       | Autor                                                                                                         |
 | :----: | :--------: | ------------------------------------------------| ------------------------------------------------------------------------------------------------------------- |
 | 1.0    | 09/08/2024 | Preenchimento do documento MER                  | [Julia Gabriela](https://github.com/JuliaGabP)                                                                |
 | 1.1    | 13/08/2024 | Correção das entidades, atributos e relações MER| [Julia Gabriela](https://github.com/JuliaGabP)                                                                |
+| 1.2    | 18/08/2024 | Atualização de acordo com o Módulo 1| [Julia Gabriela](https://github.com/JuliaGabP) 
