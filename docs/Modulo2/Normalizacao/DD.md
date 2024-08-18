@@ -151,6 +151,16 @@ Descrições de tabelas existentes devem ser revisadas para remover redundância
 | Obrigatóriedade | obrigatoriedade  | ENUM             | "sim", "não"                          | Não                  | Não     |
 | Status          | status           | VARCHAR(20)      | Caracteres                            | Não                  | Não     |
 
+## Entidade atributos
+
+#### Descrição: Um conjunto de características que descrevem o quão bom o personagem é em algo
+
+| Variável        | Nome da variável | Tipo da variável | Valores permitidos                    | Possui valores nulos | É chave |
+| --------------- | ---------------- | ---------------- | ------------------------------------- | -------------------- | ------- |
+| Força | forca | INT | Números inteiros | Não | Não | 
+| Agilidade | agilidade | INT | Números inteiros | Não | Não | 
+| Inteligência | inteligencia | INT | Números inteiros | Não | Não | 
+
 
 
 ## Histórico de versões
@@ -160,3 +170,4 @@ Descrições de tabelas existentes devem ser revisadas para remover redundância
 | 1.0    | 14/08/2024 | Criação da página e das entidades Personagem, Mundo, Sala e Fase (incompleta)                                                                                                   | [Davi Pierre](https://github.com/DaviPierre) |
 | 1.1    | 15/08/2024 | Completação da tabela Entidade Fase e criação das tabelas das entidades Arma e Fantasma                                                                                         | [Davi Pierre](https://github.com/DaviPierre) |
 | 1.2    | 17/08/2024 | Finalização do Dicionário de Dados com as entidades Inventário, Mundo, Personagem, Jogador, Fantasma, NPC passivo, NPC contratado, Item, Grupo, Objeto Interativo, Sala, Missão | [Davi Pierre](https://github.com/DaviPierre) |
+| 1.3  | 17/08/2024 | Atualização da Normalização | [Davi Pierre](https://github.com/DaviPierre) |
