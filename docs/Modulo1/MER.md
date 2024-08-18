@@ -53,6 +53,7 @@
   - preco
   - defesa
   - descricao_ataque
+  - situacao
 - item:
   - <ins>nome</ins>
   - peso
