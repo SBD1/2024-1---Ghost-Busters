@@ -20,6 +20,7 @@
 - grupo
 - inventario
 - objeto_interativo
+- atributos
 
 ## ATRIBUTOS
 - mundo:
@@ -90,6 +91,13 @@
   - acao
   - status
   - descricao
+- atributos
+  - <ins>id</ins>
+  - forca
+  - inteligencia
+  - agilidade
+  
+  
 ## RELACIONAMENTOS
 #### mundo-sala
 (1,n)------(n,n)
@@ -123,6 +131,8 @@
 (0,1)------(1,1)
 #### missao-objeto_interativo
 (0,1)------(0,1)
+#### jogador-atributos
+(1,n)------(1,1)
 
 | Versão |    Data    | Descrição                                       | Autor                                                                                                         |
 | :----: | :--------: | ------------------------------------------------| ------------------------------------------------------------------------------------------------------------- |
