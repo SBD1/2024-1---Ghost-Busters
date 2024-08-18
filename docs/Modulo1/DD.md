@@ -58,7 +58,7 @@
 | Descrição de ataque | descricao_ataque  | TEXT              | Letras, caracteres especiais, números | Não                 | Não     |
 | Dano causado          | dano_causado      | INT               | Números inteiros                      | Não                 | Não     |
 
-## Entidade npc contratado
+## Entidade npc_contratado
 
 #### Descrição: Personagem que o Jogador pode chamar para seu grupo por um preço.
 
@@ -69,7 +69,7 @@
 | Defesa                | defesa            | INT               | Números inteiros                      | Não                 | Não     |
 | Descrição do ataque | descricao_ataque  | TEXT              | Letras, caracteres especiais, números | Não                 | Não     |
 
-## Entidade npc passivo
+## Entidade npc_passivo
 
 #### Descrição: Personagem que entrega missões secundárias para o Jogador.
 
@@ -104,7 +104,7 @@
 | Membro 2        | membro_2          | VARCHAR(30)       | Caracteres         | Sim                  | Não     |
 | Membro 3        | membro_3          | VARCHAR(30)       | Caracteres         | Sim                  | Não     |
 
-## Entidade objeto interativo
+## Entidade objeto_interativo
 
 #### Descrição: Objetos que o Jogador pode realizar ações com eles.
 
@@ -124,12 +124,12 @@
 | Identificação     | id                  | SERIAL            | Números inteiros                      | Não                 | Sim      |
 | Nome                | nome                | VARCHAR(30)       | Caracteres                             | Não                 | Não     |
 | Descrição         | descricao           | TEXT              | Letras, caracteres especiais, números | Não                 | Não     |
-| Cardinalidade Norte | cardinalidade_norte | INT               | Números inteiros                      | Sim                  | Não     |
-| Cardinalidade Leste | cardinalidade_leste | INT               | Números inteiros                      | Sim                  | Não     |
-| Cardinalidade Sul   | cardinalidade_sul   | INT               | Números inteiros                      | Sim                  | Não     |
-| Cardinalidade Oeste | cardinalidade_oeste | INT               | Números inteiros                      | Sim                  | Não     |
+| Cardinalidade Norte | cardinalidade_norte | INT               | Números inteiros                      | Não                  | Não     |
+| Cardinalidade Leste | cardinalidade_leste | INT               | Números inteiros                      | Não                  | Não     |
+| Cardinalidade Sul   | cardinalidade_sul   | INT               | Números inteiros                      | Não                  | Não     |
+| Cardinalidade Oeste | cardinalidade_oeste | INT               | Números inteiros                      | Não                  | Não     |
 
-## Entidade missão
+## Entidade missao
 
 #### Descrição: Tarefas a serem cumpridas pelo jogador.
 
@@ -138,8 +138,8 @@
 | Identificação  | id                | SERIAL            | Números inteiros                      | Não                 | Sim      |
 | Nome             | nome              | VARCHAR(30)       | Caracteres                             | Não                 | Não     |
 | Ordem            | ordem             | INT               | Números inteiros                      | Nâo                 | Não     |
-| Descrição      | descrisao         | TEXT              | Letras, caracteres especiais, números | Não                 | Não     |
-| Obrigatóriedade | obrigatoriedade   | ENUM              | "sim", "não"                          | Não                 | Não     |
+| Descrição      | descricao         | TEXT              | Letras, caracteres especiais, números | Não                 | Não     |
+| Obrigatóriedade | obrigatoriedade   | BOOLEAN           | TRUE, FALSE        | Não                 | Não     |
 | Status           | status            | VARCHAR(20)       | Caracteres                             | Não                 | Não     |
 
 ## Histórico de versões
