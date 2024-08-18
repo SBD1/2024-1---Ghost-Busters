@@ -66,16 +66,17 @@ Descrições de tabelas existentes devem ser revisadas para remover redundância
 | Descrição de ataque | descricao_ataque | TEXT             | Letras, caracteres especiais, números | Não                  | Não     |
 | Dano causado        | dano_causado     | INT              | Números inteiros                      | Não                  | Não     |
 
-## Entidade npc contratado  
+## Entidade npc_contratado
 
 #### Descrição: Personagem que o Jogador pode chamar para seu grupo por um preço.
 
-| Variável            | Nome da variável | Tipo da variável | Valores permitidos                    | Possui valores nulos | É chave |
-| ------------------- | ---------------- | ---------------- | ------------------------------------- | -------------------- | ------- |
-| Preço               | preco            | INT              | Números inteiros                      | Não                  | Não     |
-| Dano                | dano             | INT              | Números inteiros                      | Não                  | Não     |
-| Defesa              | defesa           | INT              | Números inteiros                      | Não                  | Não     |
-| Descrição do ataque | descricao_ataque | TEXT             | Letras, caracteres especiais, números | Não                  | Não     |
+| Variável             | Nome da variável | Tipo da variável | Valores permitidos                     | Possui valores nulos | É chave |
+| --------------------- | ----------------- | ----------------- | -------------------------------------- | -------------------- | -------- |
+| Preço                | preco             | INT               | Números inteiros                      | Não                 | Não     |
+| Dano                  | dano              | INT               | Números inteiros                      | Não                 | Não     |
+| Defesa                | defesa            | INT               | Números inteiros                      | Não                 | Não     |
+| Descrição do ataque | descricao_ataque  | TEXT              | Letras, caracteres especiais, números | Não                 | Não     |
+| Situação | situacao | BOOLEAN | TRUE, FALSE | Não | Não | 
 
 ## Entidade npc passivo
 
