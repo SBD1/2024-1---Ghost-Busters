@@ -130,7 +130,7 @@ Descrições de tabelas existentes devem ser revisadas para remover redundância
 
 | Variável            | Nome da variável    | Tipo da variável | Valores permitidos                    | Possui valores nulos | É chave |
 | ------------------- | ------------------- | ---------------- | ------------------------------------- | -------------------- | ------- |
-| Identificação       | id                  | SERIAL           | Números inteiros                      | Não                  | Sim     |
+| Identificação       | id                  | INT           | Números inteiros                      | Não                  | Sim     |
 | Nome                | nome                | VARCHAR(30)      | Caracteres                            | Não                  | Não     |
 | Descrição           | descricao           | TEXT             | Letras, caracteres especiais, números | Não                  | Não     |
 | Cardinalidade Norte | cardinalidade_norte | INT              | Números inteiros                      | Não                  | Não     |
