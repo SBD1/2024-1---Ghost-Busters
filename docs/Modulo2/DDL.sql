@@ -30,7 +30,7 @@ CREATE TABLE personagem (
 );
 
 CREATE TABLE atributos (
-    id SERIAL PRIMARY KEY,
+    id INT PRIMARY KEY,
     forca INT NOT NULL,
     agilidade INT NOT NULL,
     inteligencia INT NOT NULL
