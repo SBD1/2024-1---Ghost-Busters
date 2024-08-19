@@ -157,7 +157,7 @@ Descrições de tabelas existentes devem ser revisadas para remover redundância
 
 | Variável      | Nome da variável | Tipo da variável | Valores permitidos | Possui valores nulos | É chave |
 | ------------- | ---------------- | ---------------- | ------------------ | -------------------- | ------- |
-| Identificação | id               | SERIAL           | Números inteiros   | Não                  | Sim     |
+| Identificação | id               | INT           | Números inteiros   | Não                  | Sim     |
 | Força         | forca            | INT              | Números inteiros   | Não                  | Não     |
 | Agilidade     | agilidade        | INT              | Números inteiros   | Não                  | Não     |
 | Inteligência  | inteligencia     | INT              | Números inteiros   | Não                  | Não     |
