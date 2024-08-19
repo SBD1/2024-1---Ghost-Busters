@@ -1,9 +1,9 @@
 BEGIN TRANSACTION;
 
 INSERT INTO mundo (nome, sala_atual, status, dificuldade) VALUES
-    ('Mundo 1', 'Central Park', 'Concluindo', 1)
-    ('Mundo 2', 'Rua 1', 'Fracassado', 2)
-    ('Mundo 3', 'Porta sinistra do esgoto 1', 3)
+    ('Mundo 1', 'Central Park', 'Concluindo', 1),
+    ('Mundo 2', 'Rua 1', 'Fracassado', 2),
+    ('Mundo 3', 'Porta sinistra do esgoto 1', 3);
 
 INSERT INTO sala (id, nome, descricao, cardinalidade_norte, cardinalidade_leste, cardinalidade_sul, cardinalidade_oeste) VALUES
     (1, 'Central Park', 'Olhando ao seu redor você consegue ver o Central Park, a grama nos seus pês e as árvores ao seu redor te trazem uma certa paz, que logo é quebrada por um barulho vibndo do bueiro do esgoto, vai ser um daqueles dias', 0, 2, 0, 0 ),
@@ -31,7 +31,7 @@ INSERT INTO atributos (id, forca, agilidade, inteligencia) VALUES
 INSERT INTO item (nome, peso, descricao, utilidade, restauracao_vida, dano, pontos_de_defesa) VALUES
     ('Twinkie', 1,'Os Twinkies são bolinhos de esponja amarela recheados com creme de baunilha, ótimos para explicações relacionadas a atividade paranormal',NULL,10,NULL,NULL),
     ('A Atlântica mensal', 1,'É uma revista de cultura e literatura americana, nós já aparecemos nela!!!',NULL,NULL,NULL,NULL),
-    ('Mochila de Protóns', 20,'É o equipamento principal dos caça fantasmas, ferramenta essencial do trabalho',NULL,NULL,10,NULL),
+    ('Mochila de Protóns', 20,'É o equipamento principal dos caça fantasmas, ferramenta essencial do trabalho',NULL,NULL,10,NULL);
     
 
 INSERT INTO grupo (nome, membro_1, membro_2, membro_3) VALUES
@@ -60,14 +60,14 @@ INSERT INTO jogador (moedas_coletadas, dinheiro, resposta) VALUES
     (3, 90, TRUE);
     
 INSERT INTO fantasma (descricao_ataque, habilidade, dica, barulho, dano_causado) VALUES 
-    ('O Slime cospe ectoplasma em você.', 'O Slime atravessa uma parede e volta com uma televisão tubão', 'VAI LER UM LIVRO SEU SUINO DESCULTURADO', ' ALSJDNAOEFNAWLDNAOVEN SLIME ATRAVESSA LASJHAOLJAWLJ', 15)
-    ('O Fantasma do Metrô te assusta com seus tentáculos', 'Te atropela te jogando contra a parede', 'SE VOCÊ ME ACHOU RUIM IMAGINA O GRANDÃO', 'TCHU TCHUUUUUUUUUUUUUUUUUUUUUUUUUUUU', 15)
-    ('O Stay Puft te ataca pisoteando os pés perto de você', 'Invoca os seus maiores medos, te atormentando', 'TOCA NA MINHA ALAVANCA E EU MATO VOCÊ', 30)
+    ('O Slime cospe ectoplasma em você.', 'O Slime atravessa uma parede e volta com uma televisão tubão', 'VAI LER UM LIVRO SEU SUINO DESCULTURADO', ' ALSJDNAOEFNAWLDNAOVEN SLIME ATRAVESSA LASJHAOLJAWLJ', 15),
+    ('O Fantasma do Metrô te assusta com seus tentáculos', 'Te atropela te jogando contra a parede', 'SE VOCÊ ME ACHOU RUIM IMAGINA O GRANDÃO', 'TCHU TCHUUUUUUUUUUUUUUUUUUUUUUUUUUUU', 15),
+    ('O Stay Puft te ataca pisoteando os pés perto de você', 'Invoca os seus maiores medos, te atormentando', 'TOCA NA MINHA ALAVANCA E EU MATO VOCÊ', 30);
 
 INSERT INTO npc_passivo (dialogo) VALUES
-    ('Por favor ajude essa velha senhora a salvar o gatinho dela que está sendo assombrado por um fantasma mal')
-    ('Com licença, mas um slimer pegou a bolinha do Totó, você poderia pegar ela de volta pra mim?')
-    ('EU PERDI MEU CHAPEU DE ALUMÍNO, SEM ELE O STAY PUFT VAI ENTRAR NA MINHA CABEÇA E DESCOBRIR MEUS MAIORES MEDOS, ALGUÉM TEM ALUMINIO?')
+    ('Por favor ajude essa velha senhora a salvar o gatinho dela que está sendo assombrado por um fantasma mal'),
+    ('Com licença, mas um slimer pegou a bolinha do Totó, você poderia pegar ela de volta pra mim?'),
+    ('EU PERDI MEU CHAPEU DE ALUMÍNO, SEM ELE O STAY PUFT VAI ENTRAR NA MINHA CABEÇA E DESCOBRIR MEUS MAIORES MEDOS, ALGUÉM TEM ALUMINIO?');
 
 INSERT INTO npc_contratado (dano, preco, defesa, descricao_ataque, situacao) VALUES
     (5, 50 , NULL , 'Ele entra em pânico e utiliza de maneira errônea o equipamento, porém ainda assim, de alguma maneira, acerta causando dano considerável', 'FALSE'),
