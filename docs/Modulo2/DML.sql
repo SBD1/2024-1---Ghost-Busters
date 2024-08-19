@@ -64,6 +64,11 @@ INSERT INTO fantasma (descricao_ataque, habilidade, dica, barulho, dano_causado)
     ('O Fantasma do Metrô te assusta com seus tentáculos', 'Te atropela te jogando contra a parede', 'SE VOCÊ ME ACHOU RUIM IMAGINA O GRANDÃO', 'TCHU TCHUUUUUUUUUUUUUUUUUUUUUUUUUUUU', 15)
     ('O Stay Puft te ataca pisoteando os pés perto de você', 'Invoca os seus maiores medos, te atormentando', 'TOCA NA MINHA ALAVANCA E EU MATO VOCÊ', 30)
 
+INSERT INTO npc_passivo (dialogo) VALUES
+    ('Por favor ajude essa velha senhora a salvar o gatinho dela que está sendo assombrado por um fantasma mal')
+    ('Com licença, mas um slimer pegou a bolinha do Totó, você poderia pegar ela de volta pra mim?')
+    ('EU PERDI MEU CHAPEU DE ALUMÍNO, SEM ELE O STAY PUFT VAI ENTRAR NA MINHA CABEÇA E DESCOBRIR MEUS MAIORES MEDOS, ALGUÉM TEM ALUMINIO?')
+
 INSERT INTO npc_contratado (dano, preco, defesa, descricao_ataque, situacao) VALUES
     (5, 50 , NULL , 'Ele entra em pânico e utiliza de maneira errônea o equipamento, porém ainda assim, de alguma maneira, acerta causando dano considerável', 'FALSE'),
     (10, 150 , 5 , 'Com certa maestria ele dispara a mochila de protóns com sucesso', 'FALSE'),
