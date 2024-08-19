@@ -1,11 +1,13 @@
 BEGIN TRANSACTION;
+-- inserções
+INSERT INTO mundo (nome, sala_atual, status, dificuldade) 
+VALUES 
+('Mundo Fácil', 'Central Park', 'concluindo', 1),
+('Mundo Médio', 'Biblioteca', 'concluindo', 2),
+('Mundo Difícil', 'Rua 1', 'fracassado', 3);
 
-INSERT INTO mundo (status, dificuldade) VALUES
-    ('Concluindo', 1),
-    ( 'Fracassado', 2),
-    ('Concluído', 3);
-
-INSERT INTO sala (id, nome, descricao, cardinalidade_norte, cardinalidade_leste, cardinalidade_sul, cardinalidade_oeste) VALUES
+INSERT INTO sala (id, nome, descricao, cardinalidade_norte, cardinalidade_leste, cardinalidade_sul, cardinalidade_oeste) 
+VALUES
     (1, 'Central Park', 'Olhando ao seu redor você consegue ver o Central Park, a grama nos seus pês e as árvores ao seu redor te trazem uma certa paz, que logo é quebrada por um barulho vibndo do bueiro do esgoto, vai ser um daqueles dias', 0, 2, 0, 0 ),
     (2, 'Entrada do Esgoto', 'Ao descer pelo bueiro você consegue ver uma pequena correnteza de água com duas calçadas de concreto cercando-a, o ambiente é escuro, humido e fedido como um banheiro de posto, estar em um ambiente como esse quase faz querer ter feito direito como sua mãe tinha te aconselhado, se você não tivesse o melhor trabalho do mundo. Tem uma pssagem na ENTRADA SUL que parece levar você mais a fundo no esgoto e uma escada de mão na ENTRADA OESTE que te leva ao CENTRAL PARK.', 0, 0, 5, 1),
     (3, 'Encruzilhada do esgoto 1', 'Olhando ao seu redor você consegue identificar algumas entradas perto de você que saem desse esgoto horrível onde você se encontra, você consegue sentir o cheiro de comida vindo da ENTRADA SUL que te faz amar esse país de novo, pela ENTRADA OESTE você consegue ver uma escadaria de pedra e pela ENTRADA OESTE você pode ir até a PORTA DE PEDRA SINISTRA.', 0, 5, 8, 4),
@@ -17,18 +19,21 @@ INSERT INTO sala (id, nome, descricao, cardinalidade_norte, cardinalidade_leste,
     (11, 'Restaurante', 'Dentro do restaurante o cheiro de comida é hipinotizante, o lugar está estranhamente vazio e com uma gosma verde ectoplasmática nas paredes de azulejo branco, a vigilâcia sanitária devia fechar esse lugar, quase dá saudade do esgoto, quase.', 0, 8, 0, 0);
 
 
-INSERT INTO personagem (nome, vida, vida_atual, descricao_fisica) VALUES
+INSERT INTO personagem (nome, vida, vida_atual, descricao_fisica) 
+VALUES
     ('Dr. Peter Venkman', 100, 100, 'Homem alto, magro, cabelo castanho escuro levemente despenteado, olhos castanhos, sorriso sarcástico e confiante. Usa uniforme bege com insígnia dos Ghostbusters no ombro e carrega equipamentos tecnológicos.', ),
     ('Dr. Raymond “Ray” Stantz', 80, 80, 'Homem de estatura média, corpo robusto, cabelo castanho claro, levemente recuado, olhos azuis, rosto amigável com um sorriso sincero. Usa uniforme bege dos Ghostbusters, com insígnia no ombro e óculos.'),
     ('Dr. Egon Spengler', 60, 60, 'Homem alto e magro, cabelo escuro, curto e bem penteado, com um topete marcante. Usa óculos grandes, tem olhos castanhos e expressão séria. Sempre em uniforme bege dos Ghostbusters, com insígnia no ombro.');
 
-INSERT INTO atributos (id, forca, agilidade, inteligencia) VALUES
-    (101, 5, 0, 10),
-    (102, 0, 10, 5),
-    (103, 10, 5, 0);
+INSERT INTO atributos (id, forca, agilidade, inteligencia) 
+VALUES 
+(1, 0, 10, 5), -- Dr. Peter Venkman
+(2, 10, 5, 0), -- Dr. Raymond “Ray” Stantz
+(3, 5, 0, 10); -- Dr. Egon Spengler
 
 
-INSERT INTO item (nome, peso, descricao, utilidade, restauracao_vida, dano, pontos_de_defesa) VALUES
+INSERT INTO item (nome, peso, descricao, utilidade, restauracao_vida, dano, pontos_de_defesa) 
+VALUES
     ('Twinkie', 1,'Os Twinkies são bolinhos de esponja amarela recheados com creme de baunilha, ótimos para explicações relacionadas a atividade paranormal',NULL,10,NULL,NULL),
     ('Pernil', 1, 'Uma delícia de refeição encontrada no restaurante, acho que o Slime deixou um escapar', NULL, 20, NULL, NULL),
     ('A Atlântica mensal', 1,'É uma revista de cultura e literatura americana, nós já aparecemos nela!!!',NULL,NULL,NULL,NULL),
@@ -41,53 +46,62 @@ INSERT INTO item (nome, peso, descricao, utilidade, restauracao_vida, dano, pont
     ('Capacete de caçadore de fantasmas', 5, 'Um capacete feito de alumínio e um tecido antectoplasma que faz com que você sinta menos os ataques dos inimigos', NULL, NULL, NULL, 4),
     ('Capacete do Stay Puft', 10, 'Um capacete do amado mascote da industria de doces Stay Puft, mas esse parece ter sido reforçado com uma fibra de chumbo, pode proteger até de radiação', NULL, NULL, NULL, 8),
     ('Amuleto de Tutancamon', 2, 'Um pequeno amuleto com um escaravelho entalhado em seu medalhão, parece te proteger de espiritos malignos', NULL, NULL, NULL, 3);
+    ('Moeda', 1, 'Uma moeda do tamanho de um biscoito, aparenta ser feita de bronze.', NULL, NULL, NULL, NULL),
+    ('Dinheiro', 0, 'Aparentam ser alguns dólares comuns.', 'Contratar ajudantes', NULL, NULL, NULL);
     
+
+INSERT INTO grupo (nome, membro_1, membro_2, membro_3) 
+VALUES 
+    ('Grupo A', 'Dr. Peter Venkman', 'NPC 1', 'NPC 2'),
+    ('Grupo B', 'Dr. Raymond “Ray” Stantz', 'NPC 3', 'NPC 4'),
+    ('Grupo C', 'Dr. Egon Spengler', 'NPC 5', 'NPC 6');
+
+INSERT INTO inventario (id, capacidade, item_nome) 
+VALUES 
+    (1, 40, 'Twinkie'),
+    (2, 40, 'A Atlântica Mensal'),
+    (3, 40, 'Mochila de Protóns');
+
+INSERT INTO objeto_interativo (id, nome, descricao, status, acao, item_nome) 
+VALUES 
+    (1, 'Porta Trancada', 'Uma porta de pedra com detalhes de fantasma entalhados.', 'trancado', 'A porta se abriu lentamente com um enorme estrondo', 'Mochila de Protóns'),
+    (2, 'Alavanca', 'Uma pequena alavanca de madeira com uma base de ferro.', 'acionado', 'weeee are the champions my friends', NULL),
+    (3, 'Botão', 'Uma pequena pedra que pode ser apertada para ser acionada.', 'desacionado', 'nada', NULL);
+
+INSERT INTO missao (id, nome, ordem, descricao, status, obrigatoriedade, sala_id, objeto_interativo_id) 
+VALUES 
+    (1, 'Cace Fantasmas', 1, 'Nova York está infestada de atividade sobrenatural, cabe a mim resolver isso, devo exterminar o máximo de fantasmas.', 'incompleta', TRUE, 1, NULL),
+    (2, 'Derrote Stay Puft', 2, 'Reunimos as moedas que estavam com os fantasmas mais fortes e abrimos o caminho, Stay Puft foi liberado, devemos derrotá-lo.', 'incompleta', TRUE, 2, NULL),
+    (3, 'Salve Cleide', NULL, 'Uma senhora está sendo atacada por criaturas paranormais, devo salvá-la.', 'incompleta', FALSE, NULL, NULL);
+
+INSERT INTO jogador (personagem_id, moedas_coletadas, dinheiro, resposta, inventario_id, grupo_id, atributos_id, item_nome, missao_id) 
+VALUES 
+    (1, 0, 100, TRUE, 1, 1, 1, 'Twinkie', 1),
+    (2, 1, 150, FALSE, 2, 2, 2, 'A Atlântica Mensal', 2),
+    (3, 2, 200, TRUE, 3, 3, 3, 'Mochila de Protóns', 3);
     
+INSERT INTO fantasma (personagem_id, descricao_ataque, habilidade, dica, barulho, dano_causado, item_nome) 
+VALUES 
+    (1, 'O Slime cospe ectoplasma em você.', 'O Slime atravessa uma parede e volta com uma televisão tubão', 'VAI LER UM LIVRO SEU SUINO DESCULTURADO', 'ALSJDNAOEFNAWLDNAOVEN SLIME ATRAVESSA LASJHAOLJAWLJ', 15, 'Moeda'),
+    (2, 'O Fantasma do Metrô te assusta com seus tentáculos', 'Te atropela te jogando contra a parede', 'SE VOCÊ ME ACHOU RUIM IMAGINA O GRANDÃO', 'TCHU TCHUUUUUUUUUUUUUUUUUUUUUUUUUUUU', 15, 'Dinheiro'),
+    (3, 'O Stay Puft te ataca pisoteando os pés perto de você', 'Invoca os seus maiores medos, te atormentando', 'TOCA NA MINHA ALAVANCA E EU MATO VOCÊ', NULL, 30, 'A Atlântica Mensal');
 
-INSERT INTO grupo (nome, membro_1, membro_2, membro_3) VALUES
-    ('Ghostbusters Original', 'Peter Venkman', 'Ray Stantz', 'Egon Spengler'),
-    ('Investigadores Paranormais', 'Peter Venkman', 'Egon Spengler', NULL),
-    ('Equipe Científica', 'Egon Spengler', 'Ray Stantz', NULL);
+INSERT INTO npc_passivo (id, possibilidades_dialogo) 
+VALUES 
+    (1, 'Por favor ajude essa velha senhora a salvar o gatinho dela que está sendo assombrado por um fantasma mal'),
+    (2, 'Com licença, mas um slimer pegou a bolinha do Totó, você poderia pegar ela de volta pra mim?'),
+    (3, 'EU PERDI MEU CHAPEU DE ALUMÍNO, SEM ELE O STAY PUFT VAI ENTRAR NA MINHA CABEÇA E DESCOBRIR MEUS MAIORES MEDOS, ALGUÉM TEM ALUMINIO?');
 
-INSERT INTO inventario (capacidade) VALUES
-    (40);
-
-INSERT INTO objeto_interativo (nome, descricao, status, acao) VALUES
-    ('Porta trancada', 'Uma porta de pedra com detalhes de fantasma entalhados', 'Trancada', 'Destrancar a porta usando a chave'),
-    ('Alavanca', 'uma pequena alavanca de madeira com uma base de ferro', 'Desacionada', 'Acionar a alavanca'),
-    ('Botão', 'Uma pequena pedra que pode ser apertada para ser acionada', 'Acionado', 'Apertar o botáo');
-
-
-INSERT INTO missao (nome, ordem, descricao, status, obrigatoriedade) VALUES
-    ('Cace Fantasmas', 1 , 'Nova York está infestada de atividade sobrenatural, cabe a mim resolver isso, devo exterminar o máximo  de fantasmsas, vou procurar a origem do evento', 'incompleta', 'TRUE'),
-    ('Derrote Stay Puft', 2 , 'Reunimos as moedas que estavam com os fantasmas mais fortes e abrimos o caminho, Stay Puft foi liberado, devemos derrota-lo', 'incompleta', 'TRUE'),
-    ('Salve Cleide', NULL , 'Uma senhora está sendo atacada por criaturas paranormais, devo salva-la', 'incompleta', 'FALSE');
-
-
-INSERT INTO jogador (moedas_coletadas, dinheiro, resposta) VALUES
-    (3, 100, TRUE),
-    (2, 50, FALSE),
-    (3, 90, TRUE);
-    
-INSERT INTO fantasma (descricao_ataque, habilidade, dica, barulho, dano_causado) VALUES 
-    ('O Slime cospe ectoplasma em você.', 'O Slime atravessa uma parede e volta com uma televisão tubão', 'VAI LER UM LIVRO SEU SUINO DESCULTURADO', ' ALSJDNAOEFNAWLDNAOVEN SLIME ATRAVESSA LASJHAOLJAWLJ', 15),
-    ('O Fantasma do Metrô te assusta com seus tentáculos', 'Te atropela te jogando contra a parede', 'SE VOCÊ ME ACHOU RUIM IMAGINA O GRANDÃO', 'TCHU TCHUUUUUUUUUUUUUUUUUUUUUUUUUUUU', 15),
-    ('O Stay Puft te ataca pisoteando os pés perto de você', 'Invoca os seus maiores medos, te atormentando', 'TOCA NA MINHA ALAVANCA E EU MATO VOCÊ', 30);
-
-INSERT INTO npc_passivo (dialogo) VALUES
-    ('Por favor ajude essa velha senhora a salvar o gatinho dela que está sendo assombrado por um fantasma mal'),
-    ('Com licença, mas um slimer pegou a bolinha do Totó, você poderia pegar ela de volta pra mim?'),
-    ('EU PERDI MEU CHAPEU DE ALUMÍNO, SEM ELE O STAY PUFT VAI ENTRAR NA MINHA CABEÇA E DESCOBRIR MEUS MAIORES MEDOS, ALGUÉM TEM ALUMINIO?');
-
-INSERT INTO npc_contratado (dano, preco, defesa, descricao_ataque, situacao) VALUES
-    (5, 50 , NULL , 'Ele entra em pânico e utiliza de maneira errônea o equipamento, porém ainda assim, de alguma maneira, acerta causando dano considerável', 'FALSE'),
-    (10, 150 , 5 , 'Com certa maestria ele dispara a mochila de protóns com sucesso', 'FALSE'),
-    (15, 200 , 10 , 'Com um reposicionamento veloz e agressivo, ele consegue acertar diretamente nos pontos fracos do fantasma', 'FALSE');
+INSERT INTO npc_contratado (id, dano, preco, defesa, descricao_ataque, situacao) 
+VALUES 
+    (1, 5, 50, NULL, 'Ele entra em pânico e utiliza de maneira errônea o equipamento, porém ainda assim, de alguma maneira, acerta causando dano considerável', 'FALSE'),
+    (2, 10, 150, 5, 'Com certa maestria ele dispara a mochila de protóns com sucesso', 'FALSE'),
+    (3, 15, 200, 10, 'Com um reposicionamento veloz e agressivo, ele consegue acertar diretamente nos pontos fracos do fantasma', 'FALSE');
 
 INSERT INTO mundo_sala (mundo_id, sala_id)VALUES 
-    (1,1 ),
-    (1,2 ),
-    (1,3 );
+    (1,1),
+    (1,2),
+    (1,3);
 
 INSERT INTO jogador_item (jogador_id, item_nome)VALUES 
     (1, 'Twinkie'),
@@ -105,6 +119,31 @@ VALUES
     ('A Atlântica mensal', 1),
     ('Mochila de Protóns', 1);
 
+--Atualizar Status de um Mundo
+UPDATE mundo 
+SET status = 'concluído' 
+WHERE id = 1;
 
+--Atualizar Dificuldade de um Mundo
+UPDATE mundo 
+SET dificuldade = 2 
+WHERE id = 2;
+
+--Atualizar Sala Atual de um Mundo
+UPDATE mundo 
+SET sala_atual = 'Biblioteca' 
+WHERE id = 3;
+
+--Excluir um Mundo Específico
+DELETE FROM mundo 
+WHERE id = 1;
+
+--Excluir Mundos com Status "fracassado"
+DELETE FROM mundo 
+WHERE status = 'fracassado';
+
+--Excluir Todos os Itens com Peso Maior que 10
+DELETE FROM item 
+WHERE peso > 10;
 
 COMMIT;
