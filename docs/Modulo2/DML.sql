@@ -59,10 +59,10 @@ INSERT INTO jogador (moedas_coletadas, dinheiro, resposta) VALUES
     (2, 50, FALSE),
     (3, 90, TRUE);
     
-INSERT INTO fantasma (descricao_ataque, habilidade, dica, barulho, dano_causado, ) VALUES 
-    ('O Slime cospe ectoplasma em você.', 'O Slime atravessa uma parede e volta com uma televisão tubão', )
-
-
+INSERT INTO npc_contratado (dano, preco, defesa, descricao_ataque, situacao) VALUES
+    (5, 50 , NULL , 'Ele entra em pânico e utiliza de maneira errônea o equipamento, porém ainda assim, de alguma maneira, acerta causando dano considerável', 'FALSE'),
+    (10, 150 , 5 , 'Com certa maestria ele dispara a mochila de protóns com sucesso', 'FALSE'),
+    (15, 200 , 10 , 'Com um reposicionamento veloz e agressivo, ele consegue acertar diretamente nos pontos fracos do fantasma', 'FALSE');
 
 
 
