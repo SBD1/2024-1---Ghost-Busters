@@ -64,10 +64,10 @@ INSERT INTO fantasma (descricao_ataque, habilidade, dica, barulho, dano_causado)
     ('O Fantasma do Metrô te assusta com seus tentáculos', 'Te atropela te jogando contra a parede', 'SE VOCÊ ME ACHOU RUIM IMAGINA O GRANDÃO', 'TCHU TCHUUUUUUUUUUUUUUUUUUUUUUUUUUUU', 15)
     ('O Stay Puft te ataca pisoteando os pés perto de você', 'Invoca os seus maiores medos, te atormentando', 'TOCA NA MINHA ALAVANCA E EU MATO VOCÊ', 30)
 
-
-
-
-
+INSERT INTO npc_contratado (dano, preco, defesa, descricao_ataque, situacao) VALUES
+    (5, 50 , NULL , 'Ele entra em pânico e utiliza de maneira errônea o equipamento, porém ainda assim, de alguma maneira, acerta causando dano considerável', 'FALSE'),
+    (10, 150 , 5 , 'Com certa maestria ele dispara a mochila de protóns com sucesso', 'FALSE'),
+    (15, 200 , 10 , 'Com um reposicionamento veloz e agressivo, ele consegue acertar diretamente nos pontos fracos do fantasma', 'FALSE');
 
 
 
