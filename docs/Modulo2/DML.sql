@@ -23,7 +23,17 @@ INSERT INTO personagem (nome, vida, vida_atual, descricao_fisica)
 VALUES
     ('Dr. Peter Venkman', 100, 100, 'Homem alto, magro, cabelo castanho escuro levemente despenteado, olhos castanhos, sorriso sarcástico e confiante. Usa uniforme bege com insígnia dos Ghostbusters no ombro e carrega equipamentos tecnológicos.', ),
     ('Dr. Raymond “Ray” Stantz', 80, 80, 'Homem de estatura média, corpo robusto, cabelo castanho claro, levemente recuado, olhos azuis, rosto amigável com um sorriso sincero. Usa uniforme bege dos Ghostbusters, com insígnia no ombro e óculos.'),
-    ('Dr. Egon Spengler', 60, 60, 'Homem alto e magro, cabelo escuro, curto e bem penteado, com um topete marcante. Usa óculos grandes, tem olhos castanhos e expressão séria. Sempre em uniforme bege dos Ghostbusters, com insígnia no ombro.');
+    ('Dr. Egon Spengler', 60, 60, 'Homem alto e magro, cabelo escuro, curto e bem penteado, com um topete marcante. Usa óculos grandes, tem olhos castanhos e expressão séria. Sempre em uniforme bege dos Ghostbusters, com insígnia no ombro.'),
+    ('Slime', 70, 70, 'Ser fantasmagórico, translúcido e verde com uma textura de gosma no corpo inteiro'),
+    ('Subway Ghost', 70, 70, 'Um ser espectral com tentáculos saindo de seu rosto azul, translúcido e com textura de ferro'),
+    ('Bibliotecária', 70, 70, 'Uma mulher velha com pele translúcida de tal forma que seus órgãos ficam visíveis'),
+    ('Stay Puft', 100, 100, 'Um ser de tamanho enorme branco com textura de marshmalow, seu corpo é pesado com imensas banhas'),
+    ('Claiton', 45, 45, 'Tatuagens falsas pelo corpo, homem alto, bombado, com uma bandana vermelha e um tapa olho'),
+    ('Bobina', 100, 100, 'Uma mulher de estatura média, magra, usando um terno preto'),
+    ('Polícial Shelby', 50, 50, 'Um homem com roupa de policial, bigodão, cabelos castanhos e óculos escuros'),
+    ('Cleide', 10, 10, 'Uma senhora de cabelos brancos, ossos frágeis e pele irrugada, usa um vestido de bolinha e uma bolsa vermelha'),
+    ('Mauríio', 10, 10, 'Um garoto com os joelhos ralados e um boné colorido para traz, cabelos castanhos e mochila de escoteiro'),
+    ('Daitin', 10, 10, 'Um cara levemente acima do peso com roupas estrupiadas, calvo, barbudo, olhos vermelhos');
 
 INSERT INTO atributos (id, forca, agilidade, inteligencia) 
 VALUES 
@@ -45,16 +55,18 @@ VALUES
     ('Trapos de caça fantasma', 5, 'Uma roupa improvisada feita para caçar fantasmas mais fracos, deixa o usuário menos vulnerável a ataques de seres paranormais', NULL, NULL, NULL, 5),
     ('Capacete de caçadore de fantasmas', 5, 'Um capacete feito de alumínio e um tecido antectoplasma que faz com que você sinta menos os ataques dos inimigos', NULL, NULL, NULL, 4),
     ('Capacete do Stay Puft', 10, 'Um capacete do amado mascote da industria de doces Stay Puft, mas esse parece ter sido reforçado com uma fibra de chumbo, pode proteger até de radiação', NULL, NULL, NULL, 8),
-    ('Amuleto de Tutancamon', 2, 'Um pequeno amuleto com um escaravelho entalhado em seu medalhão, parece te proteger de espiritos malignos', NULL, NULL, NULL, 3);
+    ('Amuleto de Tutancamon', 2, 'Um pequeno amuleto com um escaravelho entalhado em seu medalhão, parece te proteger de espiritos malignos', NULL, NULL, NULL, 3),
+    ('Papel alumínio', 1, 'Um pequeno rolo de papel alumíno que pode ser importante pra alguém', NULL, NULL, NULL, NULL),
+    ('Bolinha do Totó', 1, 'Uma pequena bolinha de borracha vermelha com marcas de mordida e babado', NULL, NULL, NULL, NULL),
     ('Moeda', 1, 'Uma moeda do tamanho de um biscoito, aparenta ser feita de bronze.', NULL, NULL, NULL, NULL),
     ('Dinheiro', 0, 'Aparentam ser alguns dólares comuns.', 'Contratar ajudantes', NULL, NULL, NULL);
     
 
 INSERT INTO grupo (nome, membro_1, membro_2, membro_3) 
 VALUES 
-    ('Grupo A', 'Dr. Peter Venkman', 'NPC 1', 'NPC 2'),
-    ('Grupo B', 'Dr. Raymond “Ray” Stantz', 'NPC 3', 'NPC 4'),
-    ('Grupo C', 'Dr. Egon Spengler', 'NPC 5', 'NPC 6');
+    ('Grupo A', 'Dr. Peter Venkman', 'Claiton', NULL),
+    ('Grupo B', 'Dr. Raymond “Ray” Stantz', 'Bobina', 'Policial Shaiby'),
+    ('Grupo C', 'Dr. Egon Spengler', NULL, NULL);
 
 INSERT INTO inventario (id, capacidade, item_nome) 
 VALUES 
@@ -72,7 +84,10 @@ INSERT INTO missao (id, nome, ordem, descricao, status, obrigatoriedade, sala_id
 VALUES 
     (1, 'Cace Fantasmas', 1, 'Nova York está infestada de atividade sobrenatural, cabe a mim resolver isso, devo exterminar o máximo de fantasmas.', 'incompleta', TRUE, 1, NULL),
     (2, 'Derrote Stay Puft', 2, 'Reunimos as moedas que estavam com os fantasmas mais fortes e abrimos o caminho, Stay Puft foi liberado, devemos derrotá-lo.', 'incompleta', TRUE, 2, NULL),
-    (3, 'Salve Cleide', NULL, 'Uma senhora está sendo atacada por criaturas paranormais, devo salvá-la.', 'incompleta', FALSE, NULL, NULL);
+    (3, 'Salve Cleide', NULL, 'Uma senhora está sendo atacada por criaturas paranormais, devo salvá-la.', 'incompleta', FALSE, NULL, NULL),
+    (4, 'Pobre Gatinho', NULL, 'O gatinho de uma senhora está sendo assombrado, ajude ela a salvar o gatinho.', 'incompleta', FALSE, NULL, NULL),
+    (5, 'Maluco do chapeu aluminio', NULL, 'O maluco local está a procura de aluminio para fazer um novo chapeu ant Stay Puft.', 'incompleta', FALSE, NULL, NULL),
+    (6, 'Pobre Doguinho', NULL, 'Um fantasma slimer roubou a bolinha favorita do Totó, pegue ela de volta.', 'incompleta', FALSE, NULL, NULL);
 
 INSERT INTO jogador (personagem_id, moedas_coletadas, dinheiro, resposta, inventario_id, grupo_id, atributos_id, item_nome, missao_id) 
 VALUES 
@@ -82,9 +97,10 @@ VALUES
     
 INSERT INTO fantasma (personagem_id, descricao_ataque, habilidade, dica, barulho, dano_causado, item_nome) 
 VALUES 
-    (1, 'O Slime cospe ectoplasma em você.', 'O Slime atravessa uma parede e volta com uma televisão tubão', 'VAI LER UM LIVRO SEU SUINO DESCULTURADO', 'ALSJDNAOEFNAWLDNAOVEN SLIME ATRAVESSA LASJHAOLJAWLJ', 15, 'Moeda'),
-    (2, 'O Fantasma do Metrô te assusta com seus tentáculos', 'Te atropela te jogando contra a parede', 'SE VOCÊ ME ACHOU RUIM IMAGINA O GRANDÃO', 'TCHU TCHUUUUUUUUUUUUUUUUUUUUUUUUUUUU', 15, 'Dinheiro'),
-    (3, 'O Stay Puft te ataca pisoteando os pés perto de você', 'Invoca os seus maiores medos, te atormentando', 'TOCA NA MINHA ALAVANCA E EU MATO VOCÊ', NULL, 30, 'A Atlântica Mensal');
+    (1, 'O Slime cospe ectoplasma em você.', 'O Slime atravessa uma parede e volta com uma televisão tubão', 'VAI LER UM LIVRO SEU SUINO DESCULTURADO', ' ALSJDNAOEFNAWLDNAOVEN SLIME ATRAVESSA LASJHAOLJAWLJ', 15),
+    (2, 'O Fantasma do Metrô te assusta com seus tentáculos', 'Te atropela te jogando contra a parede', 'NÃO DÁ PRA PENSAR DE ESTOMAGO VAZIO', 'TCHU TCHUUUUUUUUUUUUUUUUUUUUUUUUUUUU', 15),
+    (3, 'A Bibliotecária arremessa livros em você a distância', 'A Bibliotecária te ataca com vozes das histórias antigas', 'ISSO É IGAUL AO ASSASSINATO NO EXPRESSO DO ORIENTE', )
+    (4, 'O Stay Puft te ataca pisoteando os pés perto de você', 'Invoca os seus maiores medos, te atormentando', 'TOCA NA MINHA ALAVANCA E EU MATO VOCÊ', 30);
 
 INSERT INTO npc_passivo (id, possibilidades_dialogo) 
 VALUES 
