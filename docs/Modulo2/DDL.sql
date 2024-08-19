@@ -140,9 +140,9 @@ CREATE TABLE jogador_item (
 );
 
 CREATE TABLE item_inventario (
-    item_id SERIAL REFERENCES item(id),
+    item_nome SERIAL REFERENCES item(nome),
     inventario_id SERIAL REFERENCES inventario(id),
-    PRIMARY KEY (item_id, inventario_id)
+    PRIMARY KEY (item_nome, inventario_id)
 );
 
 COMMIT;
