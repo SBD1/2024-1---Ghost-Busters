@@ -87,7 +87,7 @@ CREATE TABLE jogador (
     resposta BOOLEAN NOT NULL,
     inventario_id SERIAL REFERENCES inventario(id),
     grupo_id SERIAL REFERENCES grupo(id),
-    atributos_id SERIAL REFERENCES atributos(id),
+    atributos_id INT REFERENCES atributos(id),
     item_nome VARCHAR(30) REFERENCES item(nome),
     missao_id SERIAL REFERENCES missao(id)
 );
