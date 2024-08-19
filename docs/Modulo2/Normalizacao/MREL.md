@@ -8,4 +8,4 @@
 - Novas tabelas podem ser criadas, e tabelas existentes podem ser divididas.
 - Chaves primárias e estrangeiras devem ser revisadas e possivelmente reatribuídas.
 
-[Imagem do DER](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo2/assets/MREL.png)
+[Imagem do MREL](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo2/assets/MREL.png)
