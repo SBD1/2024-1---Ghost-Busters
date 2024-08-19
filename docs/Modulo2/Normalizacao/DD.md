@@ -97,7 +97,7 @@ Descrições de tabelas existentes devem ser revisadas para remover redundância
 | Dano                          | dano             | INT              | Números inteiros                      | Sim                  | Não     |
 | Pontos de Defesa              | pontos_de_defesa | INT              | Números inteiros                      | Sim                  | Não     |
 | Restauração de pontos de vida | restauracao_vida | INT              | Números inteiros                      | Sim                  | Não     |
-| Tipo                          | tipo             | ENUM             | "dano", "defesa", "vida", "utilidade" | Não                  | Não     |
+| Tipo                          | tipo             | VARCHAR(15)      | "dano", "defesa", "vida", "utilidade" | Não                  | Não     |
 | Peso                          | peso             | INT              | Números inteiros                      | Não                  | Não     |
 | Descrição                     | descricao        | TEXT             | Letras, caracteres especiais, números | Não                  | Não     |
 
@@ -130,7 +130,7 @@ Descrições de tabelas existentes devem ser revisadas para remover redundância
 
 | Variável            | Nome da variável    | Tipo da variável | Valores permitidos                    | Possui valores nulos | É chave |
 | ------------------- | ------------------- | ---------------- | ------------------------------------- | -------------------- | ------- |
-| Identificação       | id                  | INT           | Números inteiros                      | Não                  | Sim     |
+| Identificação       | id                  | INT              | Números inteiros                      | Não                  | Sim     |
 | Nome                | nome                | VARCHAR(30)      | Caracteres                            | Não                  | Não     |
 | Descrição           | descricao           | TEXT             | Letras, caracteres especiais, números | Não                  | Não     |
 | Cardinalidade Norte | cardinalidade_norte | INT              | Números inteiros                      | Não                  | Não     |
@@ -157,7 +157,7 @@ Descrições de tabelas existentes devem ser revisadas para remover redundância
 
 | Variável      | Nome da variável | Tipo da variável | Valores permitidos | Possui valores nulos | É chave |
 | ------------- | ---------------- | ---------------- | ------------------ | -------------------- | ------- |
-| Identificação | id               | INT           | Números inteiros   | Não                  | Sim     |
+| Identificação | id               | INT              | Números inteiros   | Não                  | Sim     |
 | Força         | forca            | INT              | Números inteiros   | Não                  | Não     |
 | Agilidade     | agilidade        | INT              | Números inteiros   | Não                  | Não     |
 | Inteligência  | inteligencia     | INT              | Números inteiros   | Não                  | Não     |

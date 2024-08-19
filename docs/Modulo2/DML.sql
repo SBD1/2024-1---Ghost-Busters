@@ -1,9 +1,9 @@
 BEGIN TRANSACTION;
 
-INSERT INTO mundo (nome, sala_atual, status, dificuldade) VALUES
-    ('Mundo 1', 'Central Park', 'Concluindo', 1),
-    ('Mundo 2', 'Rua 1', 'Fracassado', 2),
-    ('Mundo 3', 'Porta sinistra do esgoto 1', 3);
+INSERT INTO mundo (status, dificuldade) VALUES
+    ('Concluindo', 1),
+    ( 'Fracassado', 2),
+    ('Concluído', 3);
 
 INSERT INTO sala (id, nome, descricao, cardinalidade_norte, cardinalidade_leste, cardinalidade_sul, cardinalidade_oeste) VALUES
     (1, 'Central Park', 'Olhando ao seu redor você consegue ver o Central Park, a grama nos seus pês e as árvores ao seu redor te trazem uma certa paz, que logo é quebrada por um barulho vibndo do bueiro do esgoto, vai ser um daqueles dias', 0, 2, 0, 0 ),
@@ -23,15 +23,25 @@ INSERT INTO personagem (nome, vida, vida_atual, descricao_fisica) VALUES
     ('Dr. Egon Spengler', 60, 60, 'Homem alto e magro, cabelo escuro, curto e bem penteado, com um topete marcante. Usa óculos grandes, tem olhos castanhos e expressão séria. Sempre em uniforme bege dos Ghostbusters, com insígnia no ombro.');
 
 INSERT INTO atributos (id, forca, agilidade, inteligencia) VALUES
-    (101,7, 5, 8),
-    (102, 4, 9, 6),
-    (103, 10, 3, 7);
+    (101, 5, 0, 10),
+    (102, 0, 10, 5),
+    (103, 10, 5, 0);
 
 
 INSERT INTO item (nome, peso, descricao, utilidade, restauracao_vida, dano, pontos_de_defesa) VALUES
     ('Twinkie', 1,'Os Twinkies são bolinhos de esponja amarela recheados com creme de baunilha, ótimos para explicações relacionadas a atividade paranormal',NULL,10,NULL,NULL),
+    ('Pernil', 1, 'Uma delícia de refeição encontrada no restaurante, acho que o Slime deixou um escapar', NULL, 20, NULL, NULL),
     ('A Atlântica mensal', 1,'É uma revista de cultura e literatura americana, nós já aparecemos nela!!!',NULL,NULL,NULL,NULL),
-    ('Mochila de Protóns', 20,'É o equipamento principal dos caça fantasmas, ferramenta essencial do trabalho',NULL,NULL,10,NULL);
+    ('Galho de uma árvore encantada', 8, 'Um galho feito da madeira de uma árvore encantada, pode ser usada por qualquer pessoa com um mínimo de habilidade', NULL, NULL, 8, NULL),
+    ('Mochila de Protóns', 20,'É o equipamento principal dos caça fantasmas, ferramenta essencial do trabalho',NULL,NULL,15,NULL),
+    ('Taco de baseball ectoplasmático', 15, 'Um taco de baseball comum com ectoplasma do Slime imbuido nele, fazendo dele muito eficiente em acertar entidades sobrenaturais', NULL, NULL, 15, NULL),
+    ('Facas xamãs gêmeas', 10, 'Essas facas foram encantadas por uma xamã antiga e são perfeitas para cortar seres ectoplasmáticos em dois', NULL, NULL, 15, NULL),
+    ('Uniforme dos caça fantasmas', 10, 'Uma roupa feita com um tecido especial que protege o usuário dos ataques espectrais  de criaturas sobrenaturais', NULL, NULL, NULL, 10),
+    ('Trapos de caça fantasma', 5, 'Uma roupa improvisada feita para caçar fantasmas mais fracos, deixa o usuário menos vulnerável a ataques de seres paranormais', NULL, NULL, NULL, 5),
+    ('Capacete de caçadore de fantasmas', 5, 'Um capacete feito de alumínio e um tecido antectoplasma que faz com que você sinta menos os ataques dos inimigos', NULL, NULL, NULL, 4),
+    ('Capacete do Stay Puft', 10, 'Um capacete do amado mascote da industria de doces Stay Puft, mas esse parece ter sido reforçado com uma fibra de chumbo, pode proteger até de radiação', NULL, NULL, NULL, 8),
+    ('Amuleto de Tutancamon', 2, 'Um pequeno amuleto com um escaravelho entalhado em seu medalhão, parece te proteger de espiritos malignos', NULL, NULL, NULL, 3);
+    
     
 
 INSERT INTO grupo (nome, membro_1, membro_2, membro_3) VALUES
