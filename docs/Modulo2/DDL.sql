@@ -1,71 +1,148 @@
 BEGIN;
 
-CREATE TABLE personagem (
-    id SERIAL PRIMARY KEY,
-    nome VARCHAR(30) NOT NULL,
-    descricao_fisica TEXT NOT NULL,
-    forca INT CHECK (forca >= 0) NOT NULL,
-    agilidade INT CHECK (agilidade >= 0) NOT NULL,
-    inteligencia INT CHECK (inteligencia >= 0) NOT NULL,
-    vida_inicial INT CHECK (vida_inicial > 0) NOT NULL
-);
-
 CREATE TABLE mundo (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(30) NOT NULL,
-    dificuldade INT CHECK (dificuldade IN (1, 2, 3)) NOT NULL,
-    status VARCHAR(20) NOT NULL,
-    id_personagem INT REFERENCES personagem(ID) NOT NULL,
-    vida_atual INT CHECK (vida_atual > 0) NOT NULL,
-    fase_atual INT NOT NULL,
-    moedas_coletadas INT DEFAULT 0 NOT NULL,
-    fantasmas_derrotados INT DEFAULT 0 NOT NULL
-);
-
-CREATE TABLE fase (
-    id SERIAL PRIMARY KEY,
-    nome VARCHAR(30) NOT NULL,
-    descricao TEXT NOT NULL,
-    ordem INT NOT NULL,
-    id_mundo INT REFERENCES mundo(id) NOT NULL,
-    coisa_ruim TEXT
+    sala_atual VARCHAR(30) NOT NULL,
+    status VARCHAR(10) NOT NULL,
+    dificuldade INT NOT NULL
 );
 
 CREATE TABLE sala (
+    id INT PRIMARY KEY,
+    nome VARCHAR(30) NOT NULL,
+    descricao TEXT NOT NULL,
+    cardinalidade_norte INT NOT NULL,
+    cardinalidade_sul INT NOT NULL,
+    cardinalidade_leste INT NOT NULL,
+    cardinalidade_oeste INT NOT NULL,
+    mundo_id SERIAL REFERENCES mundo(id)
+);
+
+CREATE TABLE personagem (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(30) NOT NULL,
+    vida INT NOT NULL,
+    vida_atual INT NOT NULL,
+    descricao_fisica TEXT NOT NULL,
+    mundo_id SERIAL REFERENCES mundo(id),
+    sala_id INT REFERENCES sala(id)
+);
+
+CREATE TABLE atributos (
+    id SERIAL PRIMARY KEY,
+    forca INT NOT NULL,
+    agilidade INT NOT NULL,
+    inteligencia INT NOT NULL
+);
+
+CREATE TABLE item (
+    nome VARCHAR(30) PRIMARY KEY,
+    peso INT NOT NULL,
+    descricao TEXT NOT NULL,
+    utilidade VARCHAR(60),
+    restauracao_vida INT,
+    dano INT,
+    pontos_de_defesa INT
+);
+
+CREATE TABLE grupo (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(30) NOT NULL,
+    membro_1 VARCHAR(30) NOT NULL,
+    membro_2 VARCHAR(30),
+    membro_3 VARCHAR(30)
+);
+
+CREATE TABLE inventario (
+    id SERIAL PRIMARY KEY,
+    capacidade INT NOT NULL,
+    item_nome VARCHAR(30) REFERENCES item(nome)
+);
+
+CREATE TABLE objeto_interativo (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(30) NOT NULL,
     descricao TEXT NOT NULL,
-    id_fase INT REFERENCES fase(id) NOT NULL,
-    ordem INT NOT NULL,
-    vida_restaurada INT CHECK (vida_restaurada BETWEEN 4 AND 8)
+    status VARCHAR(20) NOT NULL,
+    acao TEXT NOT NULL,
+    item_nome VARCHAR(30) REFERENCES item(nome)
 );
 
-CREATE TABLE arma (
+CREATE TABLE missao (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(30) NOT NULL,
-    descricao_fisica TEXT NOT NULL,
-    dano_medio INT CHECK (dano_medio > 0) NOT NULL,
-    descricao_ataque TEXT NOT NULL,
-    tipo VARCHAR(20) CHECK (tipo IN ('forca', 'agilidade', 'inteligencia')) NOT NULL
+    ordem INT NOT NULL,
+    descricao TEXT NOT NULL,
+    status VARCHAR(20) NOT NULL,
+    obrigatoriedade BOOLEAN NOT NULL,
+    sala_id INT REFERENCES sala(id),
+    objeto_interativo_id SERIAL REFERENCES objeto_interativo(id)
 );
 
-CREATE TABLE personagemarma (
-    id SERIAL PRIMARY KEY,
-    id_personagem INT REFERENCES personagem(id) NOT NULL,
-    id_arma INT REFERENCES arma(id) NOT NULL
+CREATE TABLE jogador (
+    personagem_id SERIAL PRIMARY KEY REFERENCES personagem(id),
+    moedas_coletadas INT NOT NULL,
+    dinheiro INT NOT NULL,
+    resposta BOOLEAN NOT NULL,
+    inventario_id SERIAL REFERENCES inventario(id),
+    grupo_id SERIAL REFERENCES grupo(id),
+    atributos_id SERIAL REFERENCES atributos(id),
+    item_nome VARCHAR(30) REFERENCES item(nome),
+    missao_id SERIAL REFERENCES missao(id)
 );
 
 CREATE TABLE fantasma (
-    id SERIAL PRIMARY KEY,
-    nome VARCHAR(30) NOT NULL,
-    descricao TEXT NOT NULL,
-    vida INT CHECK (vida > 0) NOT NULL,
-    ataque_especial TEXT NOT NULL,
-    barulhos TEXT NOT NULL,
-    dropa_moeda BOOLEAN NOT NULL,
-    ordem INT NOT NULL,
-    dica TEXT NOT NULL,
-    id_sala INT REFERENCES sala(id) NOT NULL
+    personagem_id SERIAL PRIMARY KEY REFERENCES personagem(id),
+    descricao_ataque TEXT NOT NULL,
+    habilidade TEXT,
+    dica TEXT,
+    barulho VARCHAR(20),
+    dano_causado INT NOT NULL,
+    item_nome VARCHAR(30) REFERENCES item(nome)
+);
+
+CREATE TABLE npc_passivo (
+    personagem_id SERIAL PRIMARY KEY REFERENCES personagem(id),
+    dialogo TEXT NOT NULL,
+    missao_id SERIAL REFERENCES missao(id),
+    item_nome VARCHAR(30) REFERENCES item(nome)
+);
+
+CREATE TABLE npc_contratado (
+    personagem_id INT PRIMARY KEY REFERENCES personagem(id),
+    dano INT NOT NULL,
+    preco INT NOT NULL,
+    defesa INT NOT NULL,
+    descricao_ataque TEXT NOT NULL,
+    situacao BOOLEAN NOT NULL,
+    grupo_id SERIAL REFERENCES grupo(id)
+);
+
+-- Relacionamentos
+
+CREATE TABLE mundo_sala (
+    mundo_id SERIAL REFERENCES mundo(id),
+    sala_id INT REFERENCES sala(id),
+    PRIMARY KEY (mundo_id, sala_id)
+);
+
+CREATE TABLE mundo_personagem (
+    mundo_id SERIAL REFERENCES mundo(id),
+    personagem_id SERIAL REFERENCES personagem(id),
+    PRIMARY KEY (mundo_id, personagem_id)
+);
+
+CREATE TABLE jogador_item (
+    jogador_id SERIAL REFERENCES jogador(personagem_id),
+    item_nome VARCHAR(30) REFERENCES item(nome),
+    PRIMARY KEY (jogador_id, item_nome)
+);
+
+CREATE TABLE item_inventario (
+    item_id SERIAL REFERENCES item(id),
+    inventario_id SERIAL REFERENCES inventario(id),
+    PRIMARY KEY (item_id, inventario_id)
 );
 
 COMMIT;
