@@ -74,10 +74,4 @@ INSERT INTO npc_contratado (dano, preco, defesa, descricao_ataque, situacao) VAL
     (10, 150 , 5 , 'Com certa maestria ele dispara a mochila de protóns com sucesso', 'FALSE'),
     (15, 200 , 10 , 'Com um reposicionamento veloz e agressivo, ele consegue acertar diretamente nos pontos fracos do fantasma', 'FALSE');
 
-
-
-
-
-
-
 COMMIT;
