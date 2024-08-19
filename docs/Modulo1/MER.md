@@ -111,7 +111,7 @@
 #### item-objeto_interativo
 (0,1)------(0,n)
 #### item-inventario
-(0,n)------(0,1)
+(0,n)------(0,n)
 #### missao-sala
 (0,1)------(1,1)
 #### missao-objeto_interativo
