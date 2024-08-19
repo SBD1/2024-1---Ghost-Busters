@@ -43,7 +43,8 @@ CREATE TABLE item (
     utilidade VARCHAR(60),
     restauracao_vida INT,
     dano INT,
-    pontos_de_defesa INT
+    pontos_de_defesa INT,
+    tipo VARCHAR(15)
 );
 
 CREATE TABLE grupo (
