@@ -59,8 +59,10 @@ INSERT INTO jogador (moedas_coletadas, dinheiro, resposta) VALUES
     (2, 50, FALSE),
     (3, 90, TRUE);
     
-INSERT INTO fantasma (descricao_ataque, habilidade, dica, barulho, dano_causado, ) VALUES 
-    ('O Slime cospe ectoplasma em você.', 'O Slime atravessa uma parede e volta com uma televisão tubão', )
+INSERT INTO fantasma (descricao_ataque, habilidade, dica, barulho, dano_causado) VALUES 
+    ('O Slime cospe ectoplasma em você.', 'O Slime atravessa uma parede e volta com uma televisão tubão', 'VAI LER UM LIVRO SEU SUINO DESCULTURADO', ' ALSJDNAOEFNAWLDNAOVEN SLIME ATRAVESSA LASJHAOLJAWLJ', 15)
+    ('O Fantasma do Metrô te assusta com seus tentáculos', 'Te atropela te jogando contra a parede', 'SE VOCÊ ME ACHOU RUIM IMAGINA O GRANDÃO', 'TCHU TCHUUUUUUUUUUUUUUUUUUUUUUUUUUUU', 15)
+    ('O Stay Puft te ataca pisoteando os pés perto de você', 'Invoca os seus maiores medos, te atormentando', 'TOCA NA MINHA ALAVANCA E EU MATO VOCÊ', 30)
 
 
 
