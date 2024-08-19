@@ -55,7 +55,7 @@ Tudo começa no icônico Central Park, agora um campo de batalha cheio de misté
 | Módulo | Link da gravação                                                                                    | Data       |
 | ------ | --------------------------------------------------------------------------------------------------- | ---------- |
 | 1      | [Apresentação Módulo 1](https://youtu.be/zVROjzIRNXc)| 22/07/24 |
-| 2      | [Apresentação Módulo 2]()| 19/08/24 |
+| 2      | [Apresentação Módulo 2](https://youtu.be/BYEsC3oOVlQ?si=m11cwRNtUazqXamk)| 19/08/24 |
 | 3      | [Apresentação Módulo 3]()| 09/09/24 |
 
 ## Entregas
