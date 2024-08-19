@@ -113,28 +113,7 @@ VALUES
     (1, 5, 50, NULL, 'Ele entra em pânico e utiliza de maneira errônea o equipamento, porém ainda assim, de alguma maneira, acerta causando dano considerável', 'FALSE'),
     (2, 10, 150, 5, 'Com certa maestria ele dispara a mochila de protóns com sucesso', 'FALSE'),
     (3, 15, 200, 10, 'Com um reposicionamento veloz e agressivo, ele consegue acertar diretamente nos pontos fracos do fantasma', 'FALSE');
-
-INSERT INTO mundo_sala (mundo_id, sala_id)VALUES 
-    (1,1),
-    (1,2),
-    (1,3);
-
-INSERT INTO jogador_item (jogador_id, item_nome)VALUES 
-    (1, 'Twinkie'),
-    (1, 'A Atlântica mensal '),
-    (1, 'Mochila de Protóns');
-
-INSERT INTO mundo_personagem (mundo_id, personagem_id) VALUES 
-    (1, 1),
-    (2, 1),
-    (3, 1);
     
-INSERT INTO item_inventario (item_nome, inventario_id)
-VALUES 
-    ('Twinkie', 1),
-    ('A Atlântica mensal', 1),
-    ('Mochila de Protóns', 1);
-
 --Atualizar Status de um Mundo
 UPDATE mundo 
 SET status = 'concluído' 
