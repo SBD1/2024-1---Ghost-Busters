@@ -23,7 +23,7 @@
 
 Tudo começa no icônico Central Park, agora um campo de batalha cheio de mistérios. Armado com apenas um equipamento básico, seu personagem rapidamente descobre a gravidade da situação: fantasmas malignos tomaram conta da cidade, e o caos reina. Para sobreviver, você deve caçar esses espíritos inquietos, aprimorar seu arsenal e reunir recursos vitais. 
 
-#### Características Principais
+### Características Principais
 
 - **Escolha entre três personagens únicos**: Cada personagem possui habilidades distintas, permitindo diferentes estilos de jogo.
 - **Explore o Central Park e seus arredores**: Enfrente uma variedade de fantasmas e desafios enquanto desvenda os segredos do parque.
@@ -33,7 +33,7 @@ Tudo começa no icônico Central Park, agora um campo de batalha cheio de misté
 - **Enfrente chefes épicos**: Lute contra inimigos colossais em batalhas intensas enquanto luta para salvar a humanidade.
 
 
-#### Como o jogo funciona?
+### Como o jogo funciona?
 
 - **Exploração por Salas**: O jogador deve se locomover por diferentes salas em várias localizações icônicas de Nova York. Cada sala é única, repleta de inimigos, itens, NPCs e segredos a serem descobertos.
 
@@ -46,7 +46,7 @@ Tudo começa no icônico Central Park, agora um campo de batalha cheio de misté
 
 
 
-### Como jogar?
+## Como jogar?
 
 ---
 
@@ -74,6 +74,12 @@ Tudo começa no icônico Central Park, agora um campo de batalha cheio de misté
   - [Data Definition Language](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo2/DDL.sql)
   - [Data Manipulation Language](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo2/DML.sql)
   - [Data Query Language](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo2/DQL.sql).
+ 
+- Módulo 3
+
+  - [Dinâmica do jogo](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo3/dinamica_do_jogo.md)
+  - [Histórias de usuários adaptado](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo3/historias_de_usuarios.md)
+  - [Stored Procedures, Triggers e views](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo3/stored_procedures_triggers_views.sql)
 
 - Módulo Final
   - Jogo MUD
@@ -86,4 +92,5 @@ Tudo começa no icônico Central Park, agora um campo de batalha cheio de misté
 | `1.1`  | 21/07/2024 | Atualização do README do projeto| [Julia Gabriela](https://github.com/JuliaGabP) |[Julia Gabriela](https://github.com/JuliaGabP)|
 | `1.2`  | 05/08/2024 | Correção de erros e adição do Módulo 2 no README do projeto| [Julia Gabriela](https://github.com/JuliaGabP) |[Matheus Barros do Nascimento](https://github.com/Ninja-Haiyai)|
 | `1.3`  | 16/08/2024 | Atualização do README do projeto|[Matheus Barros do Nascimento](https://github.com/Ninja-Haiyai)| [Julia Gabriela](https://github.com/JuliaGabP)|
-| `1.4`  | 17/08/2024 | Inserção do link de apresentação do Módulo 1 |[Julia Gabriela](https://github.com/JuliaGabP)|
+| `1.4`  | 17/08/2024 | Inserção do link de apresentação do Módulo 1 |[Julia Gabriela](https://github.com/JuliaGabP)|[Davi Pierre](https://github.com/DaviPierre)|
+| `1.5`  | 29/08/2024 | Inserção do Módulo 3| [Julia Gabriela](https://github.com/JuliaGabP) |
