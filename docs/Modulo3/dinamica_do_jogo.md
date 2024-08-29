@@ -1,0 +1,1 @@
+Dinâmica do jogo
