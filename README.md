@@ -79,7 +79,7 @@ Tudo começa no icônico Central Park, agora um campo de batalha cheio de misté
 
   - [Dinâmica do jogo](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo3/dinamica_do_jogo.md)
   - [Roles e usuários](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo3/roles_usuarios.sql)
-  - [Stored Procedures e Triggers](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo3/stored_procedures_triggers_views.sql)
+  - [Stored Procedures e Triggers](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo3/stored_procedures_triggers.sql)
   - [Views](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo3/views.sql)
 
 - Módulo Final
