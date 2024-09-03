@@ -136,7 +136,7 @@
 
 | Variável        | Nome da variável | Tipo da variável | Valores permitidos                     | Possui valores nulos | É chave |
 | ---------------- | ----------------- | ----------------- | -------------------------------------- | -------------------- | -------- |
-| Identificação  | id                | SERIAL            | Números inteiros                      | Não                 | Sim      |
+| Identificação  | id                | INT            | Números inteiros                      | Não                 | Sim      |
 | Nome             | nome              | VARCHAR(30)       | Caracteres                             | Não                 | Não     |
 | Ordem            | ordem             | INT               | Números inteiros                      | Nâo                 | Não     |
 | Descrição      | descricao         | TEXT              | Letras, caracteres especiais, números | Não                 | Não     |
