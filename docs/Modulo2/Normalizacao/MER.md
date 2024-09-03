@@ -46,7 +46,6 @@
 - jogador:
   - moedas_coletadas
   - atributos
-  - dinheiro
   - resposta
 - fantasma:
   - descricao_ataque
