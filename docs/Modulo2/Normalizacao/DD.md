@@ -50,7 +50,6 @@ Descrições de tabelas existentes devem ser revisadas para remover redundância
 | Variável         | Nome da variável | Tipo da variável | Valores permitidos | Possui valores nulos | É chave |
 | ---------------- | ---------------- | ---------------- | ------------------ | -------------------- | ------- |
 | Moedas Coletadas | moedas_coletadas | INT              | Números inteiros   | Não                  | Não     |
-| Dinheiro         | dinheiro         | INT              | Números inteiros   | Não                  | Não     |
 | Atributos        | atributos        | INT              | Números inteiros   | Não                  | Não     |
 | Resposta         | resposta         | BOOLEAN          | TRUE, FALSE        | Não                  | Não     |
 
@@ -62,7 +61,7 @@ Descrições de tabelas existentes devem ser revisadas para remover redundância
 | ------------------- | ---------------- | ---------------- | ------------------------------------- | -------------------- | ------- |
 | Dica                | dica             | TEXT             | Letras, caracteres especiais, números | Sim                  | Não     |
 | Barulho             | barulho          | VARCHAR(20)      | Caracteres                            | Sim                  | Não     |
-| Habiildade especial | habilidade       | TEXT             | Letras, caracteres especiais, números | Sim                  | Não     |
+| Habilidade especial | habilidade       | TEXT             | Letras, caracteres especiais, números | Sim                  | Não     |
 | Descrição de ataque | descricao_ataque | TEXT             | Letras, caracteres especiais, números | Não                  | Não     |
 | Dano causado        | dano_causado     | INT              | Números inteiros                      | Não                  | Não     |
 
@@ -144,7 +143,7 @@ Descrições de tabelas existentes devem ser revisadas para remover redundância
 
 | Variável        | Nome da variável | Tipo da variável | Valores permitidos                    | Possui valores nulos | É chave |
 | --------------- | ---------------- | ---------------- | ------------------------------------- | -------------------- | ------- |
-| Identificação   | id               | SERIAL           | Números inteiros                      | Não                  | Sim     |
+| Identificação   | id               | INT           | Números inteiros                      | Não                  | Sim     |
 | Nome            | nome             | VARCHAR(30)      | Caracteres                            | Não                  | Não     |
 | Ordem           | ordem            | INT              | Números inteiros                      | Nâo                  | Não     |
 | Descrição       | descrisao        | TEXT             | Letras, caracteres especiais, números | Não                  | Não     |
@@ -161,15 +160,14 @@ Descrições de tabelas existentes devem ser revisadas para remover redundância
 | Força         | forca            | INT              | Números inteiros   | Não                  | Não     |
 | Agilidade     | agilidade        | INT              | Números inteiros   | Não                  | Não     |
 | Inteligência  | inteligencia     | INT              | Números inteiros   | Não                  | Não     |
-|               |
 
 
 
 ## Histórico de versões
 
 | Versão | Data       | Descrição                                                                                                                                                                       | Autor                                        |
-| ------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| 1.0    | 14/08/2024 | Criação da página e das entidades Personagem, Mundo, Sala e Fase (incompleta)                                                                                                   | [Davi Pierre](https://github.com/DaviPierre) |
-| 1.1    | 15/08/2024 | Completação da tabela Entidade Fase e criação das tabelas das entidades Arma e Fantasma                                                                                         | [Davi Pierre](https://github.com/DaviPierre) |
+| ------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| 1.0    | 14/08/2024 | Criação da página e das entidades Personagem, Mundo, Sala e Fase (incompleta)                                                               | [Davi Pierre](https://github.com/DaviPierre) |
+| 1.1    | 15/08/2024 | Completação da tabela Entidade Fase e criação das tabelas das entidades Arma e Fantasma                                                     | [Davi Pierre](https://github.com/DaviPierre) |
 | 1.2    | 17/08/2024 | Finalização do Dicionário de Dados com as entidades Inventário, Mundo, Personagem, Jogador, Fantasma, NPC passivo, NPC contratado, Item, Grupo, Objeto Interativo, Sala, Missão | [Davi Pierre](https://github.com/DaviPierre) |
-| 1.3    | 17/08/2024 | Atualização da Normalização                                                                                                                                                     | [Davi Pierre](https://github.com/DaviPierre) |
+| 1.3    | 17/08/2024 | Atualização da Normalização                                                                                                               | [Davi Pierre](https://github.com/DaviPierre) |
