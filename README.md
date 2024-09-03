@@ -56,7 +56,7 @@ Tudo começa no icônico Central Park, agora um campo de batalha cheio de misté
 | ------ | --------------------------------------------------------------------------------------------------- | ---------- |
 | 1      | [Apresentação Módulo 1](https://youtu.be/zVROjzIRNXc)| 22/07/24 |
 | 2      | [Apresentação Módulo 2](https://youtu.be/BYEsC3oOVlQ?si=m11cwRNtUazqXamk)| 19/08/24 |
-| 3      | [Apresentação Módulo 3]()| 09/09/24 |
+| 3      | [Apresentação Módulo 3 Davi e Julia]()| 09/09/24 |
 
 ## Entregas
 
@@ -75,7 +75,7 @@ Tudo começa no icônico Central Park, agora um campo de batalha cheio de misté
   - [Data Manipulation Language](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo2/DML.sql)
   - [Data Query Language](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo2/DQL.sql).
  
-- Módulo 3
+- Módulo 3 (Davi e Julia)
 
   - [Dinâmica do jogo](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo3/dinamica_do_jogo.md)
   - [Roles e usuários](https://github.com/SBD1/2024-1---Ghost-Busters/blob/main/docs/Modulo3/roles_usuarios.sql)
