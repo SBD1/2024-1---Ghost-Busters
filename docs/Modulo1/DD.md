@@ -42,7 +42,6 @@
 | Variável        | Nome da variável | Tipo da variável | Valores permitidos | Possui valores nulos | É chave |
 | ---------------- | ----------------- | ----------------- | ------------------ | -------------------- | -------- |
 | Moedas Coletadas | moedas_coletadas  | INT               | Números inteiros  | Não                 | Não     |
-| Dinheiro         | dinheiro          | INT               | Números inteiros  | Não                 | Não     |
 | Atributos        | atributos         | INT               | Números inteiros  | Não                 | Não     |
 | Resposta         | resposta          | BOOLEAN           | TRUE, FALSE        | Não                 | Não     |
 
